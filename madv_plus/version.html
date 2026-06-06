@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="../icon.png">
+        <title>版本记录</title>
+        <style>
+            *
+            {
+                font-family: Arial, "SimHei", "黑体", "Noto Sans SC", sans-serif;
+            }
+            #homepage_border
+            {
+                border-radius: 5px;
+                border: 2px solid silver;
+                background-color: lightgrey;
+                cursor: default;
+            }
+            .homepage_inner
+            {
+                background-color: whitesmoke;
+                display: inline-block;
+                width: calc(var(--width_of_border) * 0.5 - 4.25px);
+                cursor: pointer;
+            }
+            a:link {
+                color: blue;
+                text-decoration: none;
+            }
+            a:visited {
+                color: MediumBlue;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            table {
+                border-collapse: collapse;
+                border: 1px solid black;
+            }
+            tr {
+                border: 1px solid black;
+            }
+            th {
+                border: 1px solid black;
+            }
+            td {
+                border: 1px solid black;
+            }
+            pre.samp {
+                font-family: "JetBrainsMono", "Consolas", monospace;
+            }
+            samp {
+                font-family: "JetBrainsMono", "Consolas", monospace;
+            }
+            body {
+                overflow: hidden;
+            }
+            #main {
+                position: relative;
+                top: 55px;
+                overflow: hidden auto;
+                height: calc(var(--height_of_window) - 70px);
+            }
+        </style>
+        <script>
+            function homepage_resize_update_border(){
+                const element_border = document.getElementById("homepage_border");
+                element_border_width = element_border.offsetWidth;
+                element_border.style.setProperty("--width_of_border", element_border_width + "px");
+                document.body.style.setProperty("--height_of_window", window.innerHeight + "px");
+            }
+            window.addEventListener("resize", () => {
+                homepage_resize_update_border();
+            });
+        </script>
+    </head>
+    <body>
+        <div style="position: absolute; margin: 16px; left: 0px; right: 0px; top: 0px;">
+            <div id="homepage_border">
+                <div class="homepage_inner" onclick="window.location.href = '../index.html';">
+                    <p style="padding: 5px; margin: 0; text-align: center;">More Advancements</p>
+                </div>
+                <div class="homepage_inner" onclick="window.location.href = '../madv_plus.html';" style="background-color: lightskyblue;">
+                    <p style="padding: 5px; margin: 0; text-align: center; color: black; text-decoration: none;">More Advancements Plus</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            homepage_resize_update_border();
+        </script>
+        <div id="main">
+            <h1 style="font-family: Cambria, 'Times New Roman', SimSun, serif; margin: 5px;">版本记录</h1>
+            <hr>
+            <!--
+                <div style="position: relative; margin: 7px 50px; border-left: 7px solid rgb(85, 221, 85); background-color: rgb(204, 255, 204); padding: 4px 8px;">
+                    <img src="https://zh.minecraft.wiki/images/thumb/Iron_Pickaxe_JE3_BE2.png/32px-Iron_Pickaxe_JE3_BE2.png" decoding="async" loading="lazy" width="32" height="32" style="margin: 3px 0px;">
+                    <p style="position: absolute; top: 0px; left: 40px; margin: 7px;">
+                        <b>该条目的编辑正在进行中。</b>
+                        <br>
+                        请帮助我们<u style="text-decoration: none; color: blue; cursor: pointer;">扩充或改进</u>它。
+                    </p>
+                </div>
+            -->
+            <p style="margin: 5px;">More Advancements Plus<b>版本记录</b>见下。</p>
+            <h2 style="margin: 8px 5px;">Alpha Incipient Renovate</h2>
+            <h3 style="margin: 6px 5px;">26w15a (<a href="history/26w15a.zip" download="More Advancements Plus - 26w15a.zip">下载</a>)</h3>
+            <p style="margin: 5px;">项目开始。</p>
+            <h3 style="margin: 6px 5px;">26w18a (<a href="history/26w18a.zip" download="More Advancements Plus - 26w18a.zip">下载</a>)</h3>
+            <p style="margin: 5px;">添加了“逻辑非”“红石中继器”“红石比较器”共3个进度。</p>
+            <h2 style="margin: 8px 5px;">Alpha Replacing Elementarily</h2>
+            <h3 style="margin: 6px 5px;">26w21a (<a href="history/26w21a.zip" download="More Advancements Plus - 26w21a.zip">下载</a>)</h3>
+            <p style="margin: 5px;">添加了日语的本地化。</p>
+            <h3 style="margin: 6px 5px;">26w21b (<a href="history/26w21b.zip" download="More Advancements Plus - 26w21b.zip">下载</a>)</h3>
+            <p style="margin: 5px;">添加了香港繁体、台湾正体、文言本地化。</p>
+            <h3 style="margin: 6px 5px;">26w22a (<a href="history/26w22a.zip" download="More Advancements Plus - 26w22a.zip">下载</a>)</h3>
+            <p style="margin: 5px;">添加了“如太阳一般炫酷”“物品全收集”“伤人事故”共3个进度。</p>
+            <h3 style="margin: 6px 5px;">26w22b (<a href="history/26w22b.zip" download="More Advancements Plus - 26w22b.zip">下载</a>)</h3>
+            <p style="margin: 5px;">添加了道本语的本地化。</p>
+            <h3 style="margin: 6px 5px;">26w23a (<a href="history/26w23a.zip" download="More Advancements Plus - 26w23a.zip">下载</a>)</h3>
+            <p style="margin: 5px;">添加了“自带滤波的传感器”“信息收集：阳光与内能”“电阻很低的传感器”共3个进度。同时在关于界面添加了本Wiki链接。</p>
+            <h2 style="margin: 8px 5px;">版本命名规则</h2>
+            <p style="margin: 5px;">大版本按照1个希腊字母的英文名称与2个英文单词组成，并且确保这些英文单词的首字母可以构成另一个单词。</p>
+            <p style="margin: 5px;">快照按照<i>YY</i>w<i>WWn</i>命名，其中<i>YY</i>是年份的后2位数字，<i>WW</i>是按照ISO规则的周数，<i>n</i>从a开始表示这是本周内的第几个快照。</p>
+        </div>
+    </body>
+</html>

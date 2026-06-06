@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="../icon.png">
+        <title>新增进度</title>
+        <style>
+            *
+            {
+                font-family: Arial, "SimHei", "黑体", "Noto Sans SC", sans-serif;
+            }
+            #homepage_border
+            {
+                border-radius: 5px;
+                border: 2px solid silver;
+                background-color: lightgrey;
+                cursor: default;
+            }
+            .homepage_inner
+            {
+                background-color: whitesmoke;
+                display: inline-block;
+                width: calc(var(--width_of_border) * 0.5 - 4.25px);
+                cursor: pointer;
+            }
+            a:link {
+                color: blue;
+                text-decoration: none;
+            }
+            a:visited {
+                color: MediumBlue;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            table {
+                border-collapse: collapse;
+                border: 1px solid black;
+            }
+            tr {
+                border: 1px solid black;
+            }
+            th {
+                border: 1px solid black;
+            }
+            td {
+                border: 1px solid black;
+            }
+            pre.samp {
+                font-family: "JetBrainsMono", "Consolas", monospace;
+            }
+            samp {
+                font-family: "JetBrainsMono", "Consolas", monospace;
+            }
+            body {
+                overflow: hidden;
+            }
+            #main {
+                position: relative;
+                top: 55px;
+                overflow: hidden auto;
+                height: calc(var(--height_of_window) - 70px);
+            }
+        </style>
+        <script>
+            function homepage_resize_update_border(){
+                const element_border = document.getElementById("homepage_border");
+                element_border_width = element_border.offsetWidth;
+                element_border.style.setProperty("--width_of_border", element_border_width + "px");
+                document.body.style.setProperty("--height_of_window", window.innerHeight + "px");
+            }
+            window.addEventListener("resize", () => {
+                homepage_resize_update_border();
+            });
+        </script>
+    </head>
+    <body>
+        <div style="position: absolute; margin: 16px; left: 0px; right: 0px; top: 0px;">
+            <div id="homepage_border">
+                <div class="homepage_inner" onclick="window.location.href = '../index.html';">
+                    <p style="padding: 5px; margin: 0; text-align: center;">More Advancements</p>
+                </div>
+                <div class="homepage_inner" onclick="window.location.href = '../madv_plus.html';" style="background-color: lightskyblue;">
+                    <p style="padding: 5px; margin: 0; text-align: center; color: black; text-decoration: none;">More Advancements Plus</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            homepage_resize_update_border();
+        </script>
+        <div id="main">
+            <h1 style="font-family: Cambria, 'Times New Roman', SimSun, serif; margin: 5px;">新增进度</h1>
+            <hr>
+            <!--
+                <div style="position: relative; margin: 7px 50px; border-left: 7px solid rgb(85, 221, 85); background-color: rgb(204, 255, 204); padding: 4px 8px;">
+                    <img src="https://zh.minecraft.wiki/images/thumb/Iron_Pickaxe_JE3_BE2.png/32px-Iron_Pickaxe_JE3_BE2.png" decoding="async" loading="lazy" width="32" height="32" style="margin: 3px 0px;">
+                    <p style="position: absolute; top: 0px; left: 40px; margin: 7px;">
+                        <b>该条目的编辑正在进行中。</b>
+                        <br>
+                        请帮助我们<u style="text-decoration: none; color: blue; cursor: pointer;">扩充或改进</u>它。
+                    </p>
+                </div>
+            -->
+            <p style="margin: 5px;">More Advancements Plus<b>新增进度</b>截止最新版共<i>占位符</i>个。<br>下文标注颜色的是各语言的语法结构，实际颜色不会显示在游戏中。</p>
+            <h2 style="margin: 8px 5px;">物品全收集</h2>
+            <p style="margin: 5px;">该进度要求集齐生存模式可以获得的1401种物品各1个。不要求同时获得。</p>
+            <h3 style="margin: 5px;">本地化</h3>
+            <p style="margin: 5px;">该进度定义文件的命名空间ID为madv_plus:adventure/all_item.json，该文件也是目前定义格式行数最多的一个文件。</p>
+            <table style="width: 100%;">
+                <tr>
+                    <th style="width: 20%;" rowspan="2">语言</th>
+                    <th colspan="2">翻译文本</th>
+                </tr>
+                <tr>
+                    <th style="width: 40%;">标题</th>
+                    <th style="width: 40%;">描述</th>
+                </tr>
+                <tr>
+                    <td>本地化键名</td>
+                    <td>advancement.madv_plus.adventure.all_item.title</td>
+                    <td>advancement.madv_plus.adventure.all_item.description</td>
+                </tr>
+                <tr>
+                    <td>English (US)</td>
+                    <td>A Good Collection</td>
+                    <td>Collect every items</td>
+                </tr>
+                <tr>
+                    <td>日本語 (日本)</td>
+                    <td>全てアイテム</td>
+                    <td>全てアイテム<mark style="background-color: darkorange;">を</mark>手<mark style="background-color: limegreen;">に</mark>入<mark style="background-color: red;">れる</mark></td>
+                </tr>
+                <tr>
+                    <td>文言 (華夏)</td>
+                    <td>集物冊</td>
+                    <td>得諸物各一</td>
+                </tr>
+                <tr>
+                    <td>toki pona (ma pona)</td>
+                    <td>ijo ale</td>
+                    <td><mark style="background-color: dodgerblue;">o</mark> lanpen <mark style="background-color: darkorange;">e</mark> ijo ale</td>
+                </tr>
+                <tr>
+                    <td>简体中文 (中国大陆)</td>
+                    <td>物品全收集</td>
+                    <td>集齐所有物品</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (香港特別行政區)</td>
+                    <td>物品全收集</td>
+                    <td>集齊每個物品</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (台灣)</td>
+                    <td>物品全收集</td>
+                    <td>集齊每個物品</td>
+                </tr>
+            </table>
+            <h2 style="margin: 8px 5px;">伤人事故</h2>
+            <p style="margin: 5px;">该进度要求对任意玩家造成伤害。</p>
+            <h3 style="margin: 5px;">本地化</h3>
+            <p style="margin: 5px;">该进度定义文件的命名空间ID为madv_plus:adventure/attack_self.json。</p>
+            <table style="width: 100%;">
+                <tr>
+                    <th style="width: 20%;" rowspan="2">语言</th>
+                    <th colspan="2">翻译文本</th>
+                </tr>
+                <tr>
+                    <th style="width: 40%;">标题</th>
+                    <th style="width: 40%;">描述</th>
+                </tr>
+                <tr>
+                    <td>本地化键名</td>
+                    <td>advancement.madv_plus.adventure.attack_self.title</td>
+                    <td>advancement.madv_plus.adventure.attack_self.description</td>
+                </tr>
+                <tr>
+                    <td>English (US)</td>
+                    <td>Hurting Accident</td>
+                    <td>Attack a player, incuding yourself</td>
+                </tr>
+                <tr>
+                    <td>日本語 (日本)</td>
+                    <td>事故</td>
+                    <td>任意<mark style="background-color: darkturquoise;">の</mark>プレイヤー<mark style="background-color: darkorange;">を</mark>倒すか、あなた自身<mark style="background-color: darkorange;">を</mark>含む</td>
+                </tr>
+                <tr>
+                    <td>文言 (華夏)</td>
+                    <td>近交近攻</td>
+                    <td>擊一戲者，君亦可也</td>
+                </tr>
+                <tr>
+                    <td>toki pona (ma pona)</td>
+                    <td><mark style="background-color: dodgerblue;">o</mark> pakala</td>
+                    <td><mark style="background-color: dodgerblue;">o</mark> pakala <mark style="background-color: darkorange;">e</mark> jan ante anu sina</td>
+                </tr>
+                <tr>
+                    <td>简体中文 (中国大陆)</td>
+                    <td>伤人事故</td>
+                    <td>攻击一个玩家，包括你自己</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (香港特別行政區)</td>
+                    <td>事故</td>
+                    <td>攻擊一個玩家，包括你自己</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (台灣)</td>
+                    <td>事故</td>
+                    <td>攻擊一個玩家，包括你自己</td>
+                </tr>
+            </table>
+            <h2 style="margin: 8px 5px;">末地中的灯光</h2>
+            <p style="margin: 5px;">该进度要求获得<a href="https://zh.mc.wiki/w/末地烛">末地烛</a>。</p>
+            <h3 style="margin: 5px;">本地化</h3>
+            <p style="margin: 5px;">该进度定义文件的命名空间ID为madv_plus:end/end_rod.json。</p>
+            <table style="width: 100%;">
+                <tr>
+                    <th style="width: 20%;" rowspan="2">语言</th>
+                    <th colspan="2">翻译文本</th>
+                </tr>
+                <tr>
+                    <th style="width: 40%;">标题</th>
+                    <th style="width: 40%;">描述</th>
+                </tr>
+                <tr>
+                    <td>本地化键名</td>
+                    <td>advancement.madv_plus.end.end_rod.title</td>
+                    <td>advancement.madv_plus.end.end_rod.description</td>
+                </tr>
+                <tr>
+                    <td>English (US)</td>
+                    <td>The Light In The End</td>
+                    <td>It can be only used on lighting, right?</td>
+                </tr>
+                <tr>
+                    <td>日本語 (日本)</td>
+                    <td>ジ・エンド<mark style="background-color: darkturquoise;">の</mark>光</td>
+                    <td>こわ<mark style="background-color: dodgerblue;">は</mark>明るいです</td>
+                </tr>
+                <tr>
+                    <td>文言 (華夏)</td>
+                    <td>終界燭光</td>
+                    <td>此物惟可明乎？</td>
+                </tr>
+                <tr>
+                    <td>toki pona (ma pona)</td>
+                    <td>suno lon ma pini pakala</td>
+                    <td>ni <mark style="background-color: rgb(190, 0, 0);">li</mark> suno taso anu seme?</td>
+                </tr>
+                <tr>
+                    <td>简体中文 (中国大陆)</td>
+                    <td>末地中的灯光</td>
+                    <td>这玩意只是用来照明的……对吧？</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (香港特別行政區)</td>
+                    <td>終界的燈光</td>
+                    <td>這玩意只是用來照明的……對吧？</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (台灣)</td>
+                    <td>終界的燈光</td>
+                    <td>這玩意只是用來照明的……對吧？</td>
+                </tr>
+            </table>
+            <h2 style="margin: 8px 5px;">轮作</h2>
+            <p style="margin: 5px;">该进度要求获得<a href="https://zh.mc.wiki/w/甜菜种子">甜菜种子</a>、<a href="https://zh.mc.wiki/w/西瓜种子">西瓜种子</a>、<a href="https://zh.mc.wiki/w/南瓜种子">南瓜种子</a>、<a href="https://zh.mc.wiki/w/火把花种子">火把花种子</a>、<a href="https://zh.mc.wiki/w/小麦种子">小麦种子</a>等共5种种子各1个。</p>
+            <h3 style="margin: 5px;">本地化</h3>
+            <p style="margin: 5px;">该进度定义文件的命名空间ID为madv_plus:husbandry/all_seed.json。</p>
+            <table style="width: 100%;">
+                <tr>
+                    <th style="width: 20%;" rowspan="2">语言</th>
+                    <th colspan="2">翻译文本</th>
+                </tr>
+                <tr>
+                    <th style="width: 40%;">标题</th>
+                    <th style="width: 40%;">描述</th>
+                </tr>
+                <tr>
+                    <td>本地化键名</td>
+                    <td>advancement.madv_plus.husbandry.all_seed.title</td>
+                    <td>advancement.madv_plus.husbandry.all_seed.description</td>
+                </tr>
+                <tr>
+                    <td>English (US)</td>
+                    <td>Crop Rotation</td>
+                    <td>Collect all types of seeds</td>
+                </tr>
+                <tr>
+                    <td>日本語 (日本)</td>
+                    <td>輪作</td>
+                    <td>すべて<mark style="background-color: darkturquoise;">の</mark>種<mark style="background-color: darkorange;">を</mark>手<mark style="background-color: limegreen;">に</mark>入<mark style="background-color: red;">れる</mark></td>
+                </tr>
+                <tr>
+                    <td>文言 (華夏)</td>
+                    <td>輪作</td>
+                    <td>得諸種各一</td>
+                </tr>
+                <tr>
+                    <td>toki pona (ma pona)</td>
+                    <td><mark style="background-color: dodgerblue;">o</mark> pini <mark style="background-color: darkorange;">e</mark> ma ante</td>
+                    <td><mark style="background-color: dodgerblue;">o</mark> lanpen <mark style="background-color: darkorange;">e</mark> sike mama <mark style="background-color: darkturquoise;">pi</mark> kasi ale</td>
+                </tr>
+                <tr>
+                    <td>简体中文 (中国大陆)</td>
+                    <td>轮作</td>
+                    <td>收集所有种类的种子</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (香港特別行政區)</td>
+                    <td>輪作</td>
+                    <td>獲取所有種子</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (台灣)</td>
+                    <td>輪作</td>
+                    <td>獲得每個種子</td>
+                </tr>
+            </table>
+            <h2 style="margin: 8px 5px;">升起烟雾的篝火</h2>
+            <p style="margin: 5px;">该进度要求放置<a href="https://zh.mc.wiki/w/营火">营火</a>1个。</p>
+            <h3 style="margin: 5px;">本地化</h3>
+            <p style="margin: 5px;">该进度定义文件的命名空间ID为madv_plus:husbandry/campfire_using.json。</p>
+            <table style="width: 100%;">
+                <tr>
+                    <th style="width: 20%;" rowspan="2">语言</th>
+                    <th colspan="2">翻译文本</th>
+                </tr>
+                <tr>
+                    <th style="width: 40%;">标题</th>
+                    <th style="width: 40%;">描述</th>
+                </tr>
+                <tr>
+                    <td>本地化键名</td>
+                    <td>advancement.madv_plus.husbandry.campfire_using.title</td>
+                    <td>advancement.madv_plus.husbandry.campfire_using.description</td>
+                </tr>
+                <tr>
+                    <td>English (US)</td>
+                    <td>Smoking Campfire</td>
+                    <td>Is it able to have foods cooked?</td>
+                </tr>
+                <tr>
+                    <td>日本語 (日本)</td>
+                    <td>煙<mark style="background-color: rgb(190, 0, 0);">が</mark>出て<mark style="background-color: red;">る</mark></td>
+                    <td>焚き火<mark style="background-color: darkorange;">を</mark>手<mark style="background-color: limegreen;">に</mark>入<mark style="background-color: red;">れる</mark></td>
+                </tr>
+                <tr>
+                    <td>文言 (華夏)</td>
+                    <td>煙火</td>
+                    <td>此煙可燻乎？</td>
+                </tr>
+                <tr>
+                    <td>toki pona (ma pona)</td>
+                    <td>seli palisa <mark style="background-color: rgb(190, 0, 0);">li</mark> pali</td>
+                    <td>ni <mark style="background-color: rgb(190, 0, 0);">li</mark> pali <mark style="background-color: darkorange;">e</mark> moku</td>
+                </tr>
+                <tr>
+                    <td>简体中文 (中国大陆)</td>
+                    <td>升起烟雾的篝火</td>
+                    <td>这是用来烹饪的吗？</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (香港特別行政區)</td>
+                    <td>上飄煙霧的營火</td>
+                    <td>這是用於煙燻的嗎？</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (台灣)</td>
+                    <td>上飄煙霧的篝火</td>
+                    <td>這是用於煙燻的嗎？</td>
+                </tr>
+            </table>
+            <h2 style="margin: 8px 5px;">异界农业</h2>
+            <p style="margin: 5px;">该进度要求在主世界放置<a href="https://zh.mc.wiki/w/下界疣">下界疣</a>与<a href="https://zh.mc.wiki/w/紫颂花">紫颂花</a>。</p>
+            <h3 style="margin: 5px;">本地化</h3>
+            <p style="margin: 5px;">该进度定义文件的命名空间ID为madv_plus:husbandry/overworld_wart_chorus.json。</p>
+            <table style="width: 100%;">
+                <tr>
+                    <th style="width: 20%;" rowspan="2">语言</th>
+                    <th colspan="2">翻译文本</th>
+                </tr>
+                <tr>
+                    <th style="width: 40%;">标题</th>
+                    <th style="width: 40%;">描述</th>
+                </tr>
+                <tr>
+                    <td>本地化键名</td>
+                    <td>advancement.madv_plus.husbandry.overworld_wart_chorus.title</td>
+                    <td>advancement.madv_plus.husbandry.overworld_wart_chorus.description</td>
+                </tr>
+                <tr>
+                    <td>English (US)</td>
+                    <td>Break The Dimension: Farming</td>
+                    <td>Plant a nether wart and a chorus flower in the overworld, and wait</td>
+                </tr>
+                <tr>
+                    <td>日本語 (日本)</td>
+                    <td>オーバーワールド<mark style="background-color: darkturquoise;">の</mark>農業</td>
+                    <td>ネザーウォート<mark style="background-color: lightyellow;">と</mark>コーラスフルーツ<mark style="background-color: darkorange;">を</mark>オーバーワール<mark style="background-color: limegreen;">に</mark>植え<mark style="background-color: red;">る</mark></td>
+                </tr>
+                <tr>
+                    <td>文言 (華夏)</td>
+                    <td>異界農業</td>
+                    <td>植焱界疣與頌緲果於主界</td>
+                </tr>
+                <tr>
+                    <td>toki pona (ma pona)</td>
+                    <td><mark style="background-color: dodgerblue;">o</mark> pini <mark style="background-color: darkorange;">e</mark> ma <mark style="background-color: limegreen;">lon</mark> ma pona</td>
+                    <td><mark style="background-color: dodgerblue;">o</mark> pini <mark style="background-color: darkorange;">e</mark> kili nasa en soko wawa <mark style="background-color: darkturquoise;">pi</mark> ma Nether <mark style="background-color: limegreen;">lon</mark> ma pona</td>
+                </tr>
+                <tr>
+                    <td>简体中文 (中国大陆)</td>
+                    <td>异界农业</td>
+                    <td>在主世界种植下界疣和紫颂果</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (香港特別行政區)</td>
+                    <td>異界農業</td>
+                    <td>把地獄孢子和歌萊果種植於主世界</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (台灣)</td>
+                    <td>異界農業</td>
+                    <td>把地獄疙瘩和歌萊果種植於主世界</td>
+                </tr>
+            </table>
+            <h2 style="margin: 8px 5px;">如太阳一般炫酷</h2>
+            <p style="margin: 5px;">该进度要求获得<a href="https://zh.mc.wiki/w/下界合金块">下界合金块</a>64个。</p>
+            <h3 style="margin: 5px;">本地化</h3>
+            <p style="margin: 5px;">该进度定义文件的命名空间ID为madv_plus:mine/64_netherite_block.json。</p>
+            <table style="width: 100%;">
+                <tr>
+                    <th style="width: 20%;" rowspan="2">语言</th>
+                    <th colspan="2">翻译文本</th>
+                </tr>
+                <tr>
+                    <th style="width: 40%;">标题</th>
+                    <th style="width: 40%;">描述</th>
+                </tr>
+                <tr>
+                    <td>本地化键名</td>
+                    <td>advancement.madv_plus.mine.64_netherite_block.title</td>
+                    <td>advancement.madv_plus.mine.64_netherite_block.description</td>
+                </tr>
+                <tr>
+                    <td>English (US)</td>
+                    <td>Capitalist Of Players</td>
+                    <td>Are there 64 Blocks of Netherite?</td>
+                </tr>
+                <tr>
+                    <td>日本語 (日本)</td>
+                    <td>資本主義</td>
+                    <td>これ<mark style="background-color: rgb(190, 0, 0);">が</mark>64ネザライトブロック<mark style="background-color: darkorange;">を</mark>だ？</td>
+                </tr>
+                <tr>
+                    <td>文言 (華夏)</td>
+                    <td>財若和珅</td>
+                    <td>此乃六十四玄鈺塊乎？</td>
+                </tr>
+                <tr>
+                    <td>toki pona (ma pona)</td>
+                    <td>leko epiku</td>
+                    <td>ni <mark style="background-color: rgb(190, 0, 0);">li</mark> leko <mark style="background-color: darkturquoise;">pi</mark> mani Netherite mute mute mute tu tu anu seme?</td>
+                </tr>
+                <tr>
+                    <td>简体中文 (中国大陆)</td>
+                    <td>如太阳一般炫酷</td>
+                    <td>这是64个下界合金块？</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (香港特別行政區)</td>
+                    <td>資產階級</td>
+                    <td>這是64個地獄合金磚？</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (台灣)</td>
+                    <td>資產階級</td>
+                    <td>這是64個獄髓方塊？</td>
+                </tr>
+            </table>
+            <h2 style="margin: 8px 5px;">自带滤波的传感器</h2>
+            <p style="margin: 5px;">该进度要求获得<a href="https://zh.mc.wiki/w/校频幽匿感测体">校频幽匿感测体</a>。</p>
+            <h3 style="margin: 5px;">本地化</h3>
+            <p style="margin: 5px;">该进度定义文件的命名空间ID为madv_plus:redstone/calibrated_sculk_sensor.json。</p>
+            <table style="width: 100%;">
+                <tr>
+                    <th style="width: 20%;" rowspan="2">语言</th>
+                    <th colspan="2">翻译文本</th>
+                </tr>
+                <tr>
+                    <th style="width: 40%;">标题</th>
+                    <th style="width: 40%;">描述</th>
+                </tr>
+                <tr>
+                    <td>本地化键名</td>
+                    <td>advancement.madv_plus.redstone.calibrated_sculk_sensor.title</td>
+                    <td>advancement.madv_plus.redstone.calibrated_sculk_sensor.description</td>
+                </tr>
+                <tr>
+                    <td>English (US)</td>
+                    <td>Sensor With Frequency</td>
+                    <td>Maybe... It is the ear of any machines</td>
+                </tr>
+                <tr>
+                    <td>日本語 (日本)</td>
+                    <td>声<mark style="background-color: darkturquoise;">の</mark>センサー</td>
+                    <td>これ<mark style="background-color: rgb(190, 0, 0);">が</mark>声<mark style="background-color: darkorange;">を</mark>聞ける</td>
+                </tr>
+                <tr>
+                    <td>文言 (華夏)</td>
+                    <td>許用聲之探子</td>
+                    <td>其者，赭之耳也</td>
+                </tr>
+                <tr>
+                    <td>toki pona (ma pona)</td>
+                    <td><mark style="background-color: dodgerblue;">o</mark> kute <mark style="background-color: darkorange;">e</mark> ijo</td>
+                    <td><mark style="background-color: dodgerblue;">o</mark> lanpen <mark style="background-color: darkorange;">e</mark> soko Sculk kute</td>
+                </tr>
+                <tr>
+                    <td>简体中文 (中国大陆)</td>
+                    <td>自带滤波的传感器</td>
+                    <td>也许……只有这个传感器才能充当红石的耳朵……</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (香港特別行政區)</td>
+                    <td>自帶濾波的傳感器</td>
+                    <td>也許只有這個傳感器可以探測範圍內的事情</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (台灣)</td>
+                    <td>自帶濾波的振測器</td>
+                    <td>也許只有這個振測器可以探測範圍內的事情</td>
+                </tr>
+            </table>
+            <h2 style="margin: 8px 5px;">红石比较器</h2>
+            <p style="margin: 5px;">该进度要求获得<a href="https://zh.mc.wiki/w/红石比较器">红石比较器</a>。</p>
+            <h3 style="margin: 5px;">本地化</h3>
+            <p style="margin: 5px;">该进度定义文件的命名空间ID为madv_plus:redstone/comparator.json。</p>
+            <table style="width: 100%;">
+                <tr>
+                    <th style="width: 20%;" rowspan="2">语言</th>
+                    <th colspan="2">翻译文本</th>
+                </tr>
+                <tr>
+                    <th style="width: 40%;">标题</th>
+                    <th style="width: 40%;">描述</th>
+                </tr>
+                <tr>
+                    <td>本地化键名</td>
+                    <td>advancement.madv_plus.redstone.comparator.title</td>
+                    <td>advancement.madv_plus.redstone.comparator.description</td>
+                </tr>
+                <tr>
+                    <td>English (US)</td>
+                    <td>Redstone Comparator</td>
+                    <td>Comparison, subtracion, and mesurement!</td>
+                </tr>
+                <tr>
+                    <td>日本語 (日本)</td>
+                    <td>レッドストーンコンパレーター</td>
+                    <td>比較<mark style="background-color: violet;">や</mark>引き算<mark style="background-color: violet;">や</mark>測定など</td>
+                </tr>
+                <tr>
+                    <td>文言 (華夏)</td>
+                    <td>較赭儀</td>
+                    <td>較、差、測，皆可！</td>
+                </tr>
+                <tr>
+                    <td>toki pona (ma pona)</td>
+                    <td><mark style="background-color: dodgerblue;">o</mark> ante <mark style="background-color: darkorange;">e</mark> nanpa</td>
+                    <td><mark style="background-color: dodgerblue;">o</mark> lanpan <mark style="background-color: darkorange;">e</mark> ilo <mark style="background-color: darkturquoise;">pi</mark> ante wawa <mark style="background-color: darkturquoise;">pi</mark> ko Redstone</td>
+                </tr>
+                <tr>
+                    <td>简体中文 (中国大陆)</td>
+                    <td>红石比较器</td>
+                    <td>比较、作差、测量，一应俱全！</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (香港特別行政區)</td>
+                    <td>紅石比較器</td>
+                    <td>比較、作差、測量，一應俱全！</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (台灣)</td>
+                    <td>紅石比較器</td>
+                    <td>比較、作差、測量，一應俱全！</td>
+                </tr>
+            </table>
+            <h2 style="margin: 8px 5px;">信息收集：阳光与内能</h2>
+            <p style="margin: 5px;">该进度要求获得<a href="https://zh.mc.wiki/w/阳光探测器">阳光探测器</a>。</p>
+            <h3 style="margin: 5px;">本地化</h3>
+            <p style="margin: 5px;">该进度定义文件的命名空间ID为madv_plus:redstone/daylight_dectector.json。</p>
+            <table style="width: 100%;">
+                <tr>
+                    <th style="width: 20%;" rowspan="2">语言</th>
+                    <th colspan="2">翻译文本</th>
+                </tr>
+                <tr>
+                    <th style="width: 40%;">标题</th>
+                    <th style="width: 40%;">描述</th>
+                </tr>
+                <tr>
+                    <td>本地化键名</td>
+                    <td>advancement.madv_plus.redstone.daylight_dectector.title</td>
+                    <td>advancement.madv_plus.redstone.daylight_dectector.description</td>
+                </tr>
+                <tr>
+                    <td>English (US)</td>
+                    <td>The Power of The Sun</td>
+                    <td>It will always collect the energy coming from the sun!</td>
+                </tr>
+                <tr>
+                    <td>日本語 (日本)</td>
+                    <td>日<mark style="background-color: darkturquoise;">の</mark>エナジー</td>
+                    <td>しかし何事も<mark style="background-color: darkorange;">を</mark>聞きたい</td>
+                </tr>
+                <tr>
+                    <td>文言 (華夏)</td>
+                    <td>日之訊</td>
+                    <td>晷漏之準繩</td>
+                </tr>
+                <tr>
+                    <td>toki pona (ma pona)</td>
+                    <td>wawa suno</td>
+                    <td><mark style="background-color: dodgerblue;">o</mark> pona <mark style="background-color: darkorange;">e</mark> tenpo</td>
+                </tr>
+                <tr>
+                    <td>简体中文 (中国大陆)</td>
+                    <td>信息收集：阳光与内能</td>
+                    <td>也许这个红石原件可以校准时钟？</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (香港特別行政區)</td>
+                    <td>信息收集：陽光與熱能</td>
+                    <td>也許這個紅石原件可以校準時鐘？</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (台灣)</td>
+                    <td>信息收集：陽光與熱能</td>
+                    <td>也許這個紅石原件可以校准時鐘？</td>
+                </tr>
+            </table>
+            <h2 style="margin: 8px 5px;">逻辑非</h2>
+            <p style="margin: 5px;">该进度要求获得<a href="https://zh.mc.wiki/w/红石火把">红石火把</a>。</p>
+            <h3 style="margin: 5px;">本地化</h3>
+            <p style="margin: 5px;">该进度定义文件的命名空间ID为madv_plus:redstone/redstone_torch.json。</p>
+            <table style="width: 100%;">
+                <tr>
+                    <th style="width: 20%;" rowspan="2">语言</th>
+                    <th colspan="2">翻译文本</th>
+                </tr>
+                <tr>
+                    <th style="width: 40%;">标题</th>
+                    <th style="width: 40%;">描述</th>
+                </tr>
+                <tr>
+                    <td>本地化键名</td>
+                    <td>advancement.madv_plus.redstone.redstone_torch.title</td>
+                    <td>advancement.madv_plus.redstone.redstone_torch.description</td>
+                </tr>
+                <tr>
+                    <td>English (US)</td>
+                    <td>Analog & Digital Circuit</td>
+                    <td>The beginning of information technology!</td>
+                </tr>
+                <tr>
+                    <td>日本語 (日本)</td>
+                    <td>NOTゲート</td>
+                    <td>レッドストーントーチ<mark style="background-color: darkorange;">を</mark>手<mark style="background-color: limegreen;">に</mark>入<mark style="background-color: red;">れる</mark></td>
+                </tr>
+                <tr>
+                    <td>文言 (華夏)</td>
+                    <td>非門</td>
+                    <td>得赤石炬</td>
+                </tr>
+                <tr>
+                    <td>toki pona (ma pona)</td>
+                    <td>ala</td>
+                    <td><mark style="background-color: dodgerblue;">o</mark> lanpan <mark style="background-color: darkorange;">e</mark> palisa suno <mark style="background-color: darkturquoise;">pi</mark> ko Redstone</td>
+                </tr>
+                <tr>
+                    <td>简体中文 (中国大陆)</td>
+                    <td>逻辑非</td>
+                    <td>模拟电路与数字电路，信息技术初步！</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (香港特別行政區)</td>
+                    <td>非門</td>
+                    <td>獲取紅石火把</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (台灣)</td>
+                    <td>非門</td>
+                    <td>獲得紅石火把</td>
+                </tr>
+            </table>
+            <h2 style="margin: 8px 5px;">红石中继器</h2>
+            <p style="margin: 5px;">该进度要求获得<a href="https://zh.mc.wiki/w/红石中继器">红石中继器</a>。</p>
+            <h3 style="margin: 5px;">本地化</h3>
+            <p style="margin: 5px;">该进度定义文件的命名空间ID为madv_plus:redstone/repeater.json。</p>
+            <table style="width: 100%;">
+                <tr>
+                    <th style="width: 20%;" rowspan="2">语言</th>
+                    <th colspan="2">翻译文本</th>
+                </tr>
+                <tr>
+                    <th style="width: 40%;">标题</th>
+                    <th style="width: 40%;">描述</th>
+                </tr>
+                <tr>
+                    <td>本地化键名</td>
+                    <td>advancement.madv_plus.redstone.repeater.title</td>
+                    <td>advancement.madv_plus.redstone.repeater.description</td>
+                </tr>
+                <tr>
+                    <td>English (US)</td>
+                    <td>Redstone Repeater</td>
+                    <td>Latch is allowed, and you can also extend the signal!</td>
+                </tr>
+                <tr>
+                    <td>日本語 (日本)</td>
+                    <td>レッドストーンリピーター</td>
+                    <td>延長<mark style="background-color: darkorange;">を</mark>ストレージなど</td>
+                </tr>
+                <tr>
+                    <td>文言 (華夏)</td>
+                    <td>續赭儀</td>
+                    <td>存、長文也</td>
+                </tr>
+                <tr>
+                    <td>toki pona (ma pona)</td>
+                    <td>lon en ijo suli</td>
+                    <td><mark style="background-color: dodgerblue;">o</mark> lanpan <mark style="background-color: darkorange;">e</mark> ilo <mark style="background-color: darkturquoise;">pi</mark> tenpo wawa <mark style="background-color: darkturquoise;">pi</mark> ko Redstone</td>
+                </tr>
+                <tr>
+                    <td>简体中文 (中国大陆)</td>
+                    <td>红石中继器</td>
+                    <td>文可锁存数据，武可延长信号！</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (香港特別行政區)</td>
+                    <td>紅石中繼器</td>
+                    <td>鎖存數據，延長信號</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (台灣)</td>
+                    <td>紅石中繼器</td>
+                    <td>鎖存數據，延長信號</td>
+                </tr>
+            </table>
+            <h2 style="margin: 8px 5px;">电阻很低的传感器</h2>
+            <p style="margin: 5px;">该进度要求获得<a href="https://zh.mc.wiki/w/幽匿感测体">幽匿感测体</a>。</p>
+            <h3 style="margin: 5px;">本地化</h3>
+            <p style="margin: 5px;">该进度定义文件的命名空间ID为madv_plus:redstone/sculk_sensor.json。</p>
+            <table style="width: 100%;">
+                <tr>
+                    <th style="width: 20%;" rowspan="2">语言</th>
+                    <th colspan="2">翻译文本</th>
+                </tr>
+                <tr>
+                    <th style="width: 40%;">标题</th>
+                    <th style="width: 40%;">描述</th>
+                </tr>
+                <tr>
+                    <td>本地化键名</td>
+                    <td>advancement.madv_plus.redstone.sculk_sensor.title</td>
+                    <td>advancement.madv_plus.redstone.sculk_sensor.description</td>
+                </tr>
+                <tr>
+                    <td>English (US)</td>
+                    <td>No Sound, No Power</td>
+                    <td>But the resistance seems to be too low...</td>
+                </tr>
+                <tr>
+                    <td>日本語 (日本)</td>
+                    <td>声<mark style="background-color: darkturquoise;">の</mark>エナジー</td>
+                    <td>レジスト<mark style="background-color: rgb(190, 0, 0);">が</mark>少ないです</td>
+                </tr>
+                <tr>
+                    <td>文言 (華夏)</td>
+                    <td>聲之探子</td>
+                    <td>幽匿探子聞萬物也</td>
+                </tr>
+                <tr>
+                    <td>toki pona (ma pona)</td>
+                    <td><mark style="background-color: dodgerblue;">o</mark> kute <mark style="background-color:lime;">la</mark> ilo ike</td>
+                    <td>ni <mark style="background-color: rgb(190, 0, 0);">li</mark> kute <mark style="background-color: darkorange;">e</mark> kalama</td>
+                </tr>
+                <tr>
+                    <td>简体中文 (中国大陆)</td>
+                    <td>电阻很低的传感器</td>
+                    <td>幽匿感测体可以聆听范围内一切声音！</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (香港特別行政區)</td>
+                    <td>電阻很低的傳感器</td>
+                    <td>沉靈傳感器可以聽到範圍內一切聲音！</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (台灣)</td>
+                    <td>電阻很低的振測器</td>
+                    <td>伏聆振測器可以聽到範圍內一切聲音！</td>
+                </tr>
+            </table>
+            <h2 style="margin: 8px 5px;">万花桶</h2>
+            <p style="margin: 5px;">该进度要求获得所有种类的<a href="https://zh.mc.wiki/w/桶">桶</a>。</p>
+            <h3 style="margin: 5px;">本地化</h3>
+            <p style="margin: 5px;">该进度定义文件的命名空间ID为madv_plus:story/all_bucket.json。</p>
+            <table style="width: 100%;">
+                <tr>
+                    <th style="width: 20%;" rowspan="2">语言</th>
+                    <th colspan="2">翻译文本</th>
+                </tr>
+                <tr>
+                    <th style="width: 40%;">标题</th>
+                    <th style="width: 40%;">描述</th>
+                </tr>
+                <tr>
+                    <td>本地化键名</td>
+                    <td>advancement.madv_plus.story.all_bucket.title</td>
+                    <td>advancement.madv_plus.story.all_bucket.description</td>
+                </tr>
+                <tr>
+                    <td>English (US)</td>
+                    <td>Kaleidobucket</td>
+                    <td>Collect all types of buckets</td>
+                </tr>
+                <tr>
+                    <td>日本語 (日本)</td>
+                    <td>カレィドバケツ</td>
+                    <td>すべて<mark style="background-color: darkturquoise;">の</mark>バケツ<mark style="background-color: darkorange;">を</mark>手<mark style="background-color: limegreen;">に</mark>入<mark style="background-color: red;">れる</mark></td>
+                </tr>
+                <tr>
+                    <td>文言 (華夏)</td>
+                    <td>萬花桶</td>
+                    <td>得諸桶各一</td>
+                </tr>
+                <tr>
+                    <td>toki pona (ma pona)</td>
+                    <td>poki telo ale</td>
+                    <td><mark style="background-color: dodgerblue;">o</mark> lanpan <mark style="background-color: darkorange;">e</mark> poki telo ale</td>
+                </tr>
+                <tr>
+                    <td>简体中文 (中国大陆)</td>
+                    <td>万花桶</td>
+                    <td>收集所有种类的桶</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (香港特別行政區)</td>
+                    <td>萬花桶</td>
+                    <td>獲取每種桶</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (台灣)</td>
+                    <td>萬花桶</td>
+                    <td>獲得每種桶</td>
+                </tr>
+            </table>
+            <h2 style="margin: 8px 5px;">不透明鱼缸</h2>
+            <p style="margin: 5px;">该进度要求获得除<a href="https://zh.mc.wiki/w/硫方怪桶">硫方怪桶</a>以外所有种类的<a href="https://zh.mc.wiki/w/生物桶">生物桶</a>。</p>
+            <h3 style="margin: 5px;">本地化</h3>
+            <p style="margin: 5px;">该进度定义文件的命名空间ID为madv_plus:story/all_mob_bucket.json。</p>
+            <table style="width: 100%;">
+                <tr>
+                    <th style="width: 20%;" rowspan="2">语言</th>
+                    <th colspan="2">翻译文本</th>
+                </tr>
+                <tr>
+                    <th style="width: 40%;">标题</th>
+                    <th style="width: 40%;">描述</th>
+                </tr>
+                <tr>
+                    <td>本地化键名</td>
+                    <td>advancement.madv_plus.story.all_mob_bucket.title</td>
+                    <td>advancement.madv_plus.story.all_mob_bucket.description</td>
+                </tr>
+                <tr>
+                    <td>English (US)</td>
+                    <td>Opaque Fish Jars</td>
+                    <td>Collect all types of buckets with fishes</td>
+                </tr>
+                <tr>
+                    <td>日本語 (日本)</td>
+                    <td>カレィドバケツ</td>
+                    <td>すべて<mark style="background-color: darkturquoise;">の</mark>バケツ魚入り<mark style="background-color: darkorange;">を</mark>手<mark style="background-color: limegreen;">に</mark>入<mark style="background-color: red;">れる</mark></td>
+                </tr>
+                <tr>
+                    <td>文言 (華夏)</td>
+                    <td>諸君入桶</td>
+                    <td>得諸魚桶各一</td>
+                </tr>
+                <tr>
+                    <td>toki pona (ma pona)</td>
+                    <td>poki pi kala</td>
+                    <td><mark style="background-color: dodgerblue;">o</mark> lanpan <mark style="background-color: darkorange;">e</mark> kala lon poki ale</td>
+                </tr>
+                <tr>
+                    <td>简体中文 (中国大陆)</td>
+                    <td>不透明鱼缸</td>
+                    <td>收集所有种类的鱼桶</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (香港特別行政區)</td>
+                    <td>不透明魚缸</td>
+                    <td>獲取每種魚桶</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (台灣)</td>
+                    <td>不透明魚缸</td>
+                    <td>獲得每種魚桶</td>
+                </tr>
+            </table>
+            <h2 style="margin: 8px 5px;">你说你获得了什么？</h2>
+            <p style="margin: 5px;">该进度要求获得<a href="https://zh.mc.wiki/w/海绵">海绵</a>。</p>
+            <h3 style="margin: 5px;">本地化</h3>
+            <p style="margin: 5px;">该进度定义文件的命名空间ID为madv_plus:world/sponge.json。</p>
+            <table style="width: 100%;">
+                <tr>
+                    <th style="width: 20%;" rowspan="2">语言</th>
+                    <th colspan="2">翻译文本</th>
+                </tr>
+                <tr>
+                    <th style="width: 40%;">标题</th>
+                    <th style="width: 40%;">描述</th>
+                </tr>
+                <tr>
+                    <td>本地化键名</td>
+                    <td>advancement.madv_plus.world.sponge.title</td>
+                    <td>advancement.madv_plus.world.sponge.description</td>
+                </tr>
+                <tr>
+                    <td>English (US)</td>
+                    <td>Exactly... What Did You Acquire?</td>
+                    <td>Acquire Sponges</td>
+                </tr>
+                <tr>
+                    <td>日本語 (日本)</td>
+                    <td>何？</td>
+                    <td>スポンジ<mark style="background-color: darkorange;">を</mark>手<mark style="background-color: limegreen;">に</mark>入<mark style="background-color: red;">れる</mark></td>
+                </tr>
+                <tr>
+                    <td>文言 (華夏)</td>
+                    <td>得何物也？</td>
+                    <td>得一海綿</td>
+                </tr>
+                <tr>
+                    <td>toki pona (ma pona)</td>
+                    <td>ijo ni <mark style="background-color: rgb(190, 0, 0);">li</mark> seme?</td>
+                    <td><mark style="background-color: dodgerblue;">o</mark> lanpan <mark style="background-color: darkorange;">e</mark> ko <mark style="background-color: darkturquoise;">pi</mark> weka telo</td>
+                </tr>
+                <tr>
+                    <td>简体中文 (中国大陆)</td>
+                    <td>你说你获得了什么？</td>
+                    <td>获得一块海绵</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (香港特別行政區)</td>
+                    <td>你說你獲得了什麼？</td>
+                    <td>獲取一塊海綿</td>
+                </tr>
+                <tr>
+                    <td>繁體中文 (台灣)</td>
+                    <td>你說你獲得了什麼？</td>
+                    <td>獲得一塊海綿</td>
+                </tr>
+            </table>
+            <h2 style="margin: 8px 5px;">进度图标</h2>
+            <table>
+                <tr>
+                    <td>
+                        <div style="position: relative;">
+                            <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+                            <img src="https://zh.minecraft.wiki/images/Invicon_Redstone_Repeater.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
+                        </div>
+                    </td>
+                    <td>
+                        <div style="position: relative;">
+                            <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+                            <img src="https://zh.minecraft.wiki/images/Invicon_Golden_Sword.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
+                        </div>
+                    </td>
+                    <td>
+                        <div style="position: relative;">
+                            <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+                            <img src="https://zh.minecraft.wiki/images/Invicon_End_Rod.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
+                        </div>
+                    </td>
+                    <td>
+                        <div style="position: relative;">
+                            <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+                            <img src="https://zh.minecraft.wiki/images/Invicon_Melon_Seeds.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
+                        </div>
+                    </td>
+                    <td>
+                        <div style="position: relative;">
+                            <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+                            <img src="https://zh.minecraft.wiki/images/Invicon_Campfire.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
+                        </div>
+                    </td>
+                    <td>
+                        <div style="position: relative;">
+                            <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+                            <img src="https://zh.minecraft.wiki/images/Invicon_Nether_Wart.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
+                        </div>
+                    </td>
+                    <td>
+                        <div style="position: relative;">
+                            <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+                            <img src="https://zh.minecraft.wiki/images/Invicon_Block_of_Netherite.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
+                        </div>
+                    </td>
+                    <td>
+                        <div style="position: relative;">
+                            <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+                            <img src="https://zh.minecraft.wiki/images/Invicon_Calibrated_Sculk_Sensor.gif" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
+                        </div>
+                    </td>
+                    <td>
+                        <div style="position: relative;">
+                            <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+                            <img src="https://zh.minecraft.wiki/images/Invicon_Redstone_Comparator.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
+                        </div>
+                    </td>
+                    <td>
+                        <div style="position: relative;">
+                            <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+                            <img src="https://zh.minecraft.wiki/images/Invicon_Daylight_Detector.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
+                        </div>
+                    </td>
+                    <td>
+                        <div style="position: relative;">
+                            <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+                            <img src="https://zh.minecraft.wiki/images/Invicon_Redstone_Torch.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
+                        </div>
+                    </td>
+                    <td>
+                        <div style="position: relative;">
+                            <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+                            <img src="https://zh.minecraft.wiki/images/Invicon_Redstone_Repeater.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
+                        </div>
+                    </td>
+                    <td>
+                        <div style="position: relative;">
+                            <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+                            <img src="https://zh.minecraft.wiki/images/Invicon_Sculk_Sensor.gif" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
+                        </div>
+                    </td>
+                    <td>
+                        <div style="position: relative;">
+                            <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+                            <img src="https://zh.minecraft.wiki/images/Invicon_Bucket.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
+                        </div>
+                    </td>
+                    <td>
+                        <div style="position: relative;">
+                            <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+                            <img src="https://zh.minecraft.wiki/images/Invicon_Bucket.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
+                        </div>
+                    </td>
+                    <td>
+                        <div style="position: relative;">
+                            <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+                            <img src="https://zh.minecraft.wiki/images/Invicon_Sponge.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th style="width: 60px;">伤人事故</th>
+                    <th style="width: 60px;">物品全收集</th>
+                    <th style="width: 60px;">末地中的灯光</th>
+                    <th style="width: 60px;">轮作</th>
+                    <th style="width: 60px;">升起烟雾的篝火</th>
+                    <th style="width: 60px;">异界农业</th>
+                    <th style="width: 60px;">如太阳一般炫酷</th>
+                    <th style="width: 60px;">自带滤波的传感器</th>
+                    <th style="width: 60px;">红石比较器</th>
+                    <th style="width: 60px;">信息收集：阳光与内能</th>
+                    <th style="width: 60px;">逻辑非</th>
+                    <th style="width: 60px;">红石中继器</th>
+                    <th style="width: 60px;">电阻很低的传感器</th>
+                    <th style="width: 60px;">万花桶</th>
+                    <th style="width: 60px;">不透明鱼缸</th>
+                    <th style="width: 60px;">你说你获得了什么？</th>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
