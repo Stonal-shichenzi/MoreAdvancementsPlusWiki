@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="../icon.png">
+        <title>世界</title>
+        <style>
+            *
+            {
+                font-family: Arial, "SimHei", "黑体", "Noto Sans SC", sans-serif;
+            }
+            #homepage_border
+            {
+                border-radius: 5px;
+                border: 2px solid silver;
+                background-color: lightgrey;
+                cursor: default;
+            }
+            .homepage_inner
+            {
+                background-color: whitesmoke;
+                display: inline-block;
+                width: calc(var(--width_of_border) * 0.5 - 4.25px);
+                cursor: pointer;
+            }
+            a:link {
+                color: blue;
+                text-decoration: none;
+            }
+            a:visited {
+                color: MediumBlue;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            table {
+                border-collapse: collapse;
+                border: 1px solid black;
+            }
+            tr {
+                border: 1px solid black;
+            }
+            th {
+                border: 1px solid black;
+            }
+            td {
+                border: 1px solid black;
+            }
+            pre.samp {
+                font-family: "JetBrainsMono", "Consolas", monospace;
+            }
+            samp {
+                font-family: "JetBrainsMono", "Consolas", monospace;
+            }
+            body {
+                overflow: hidden;
+            }
+            #main {
+                position: relative;
+                top: 55px;
+                overflow: hidden auto;
+                height: calc(var(--height_of_window) - 70px);
+            }
+        </style>
+        <script>
+            function homepage_resize_update_border(){
+                const element_border = document.getElementById("homepage_border");
+                element_border_width = element_border.offsetWidth;
+                element_border.style.setProperty("--width_of_border", element_border_width + "px");
+                document.body.style.setProperty("--height_of_window", window.innerHeight + "px");
+            }
+            window.addEventListener("resize", () => {
+                homepage_resize_update_border();
+            });
+        </script>
+    </head>
+    <body>
+        <div style="position: absolute; margin: 16px; left: 0px; right: 0px; top: 0px;">
+            <div id="homepage_border">
+                <div class="homepage_inner" onclick="window.location.href = '../index.html';" style="background-color: lawngreen;">
+                    <p style="padding: 5px; margin: 0; text-align: center;">More Advancements</p>
+                </div>
+                <div class="homepage_inner" onclick="window.location.href = '../madv_plus.html';">
+                    <p style="padding: 5px; margin: 0; text-align: center; color: black; text-decoration: none;">More Advancements Plus</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            homepage_resize_update_border();
+        </script>
+        <div id="main">
+        <p style="margin: 5px;">在More Advancements中，“世界”选项卡一共有152个进度：</p>
+        <table>
+            <tr>
+                <th style="text-align: center;">图标</td>
+                <th style="text-align: center;">标题</td>
+                <th style="text-align: center;">描述</td>
+                <th style="text-align: center;">文件路径</td>
+                <th style="text-align: center;">实际需求（若异）</td>
+            </tr><tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Azure_Bluet.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">采花大盗</td>
+    <td style="width:200px;">收集所有种类的花</td>
+    <td style="width:100px;"><samp>world/all_flowers.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Calcite.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">踏遍山河</td>
+    <td style="width:200px;">造访所有山地和丘陵类生物群系</td>
+    <td style="width:100px;"><samp>world/all_moutains.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Feather.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">欲与天公试比高</td>
+    <td style="width:200px;">骑着快乐恶魂飞越所有山地和丘陵类生物群系</td>
+    <td style="width:100px;"><samp>world/all_moutains_by_happy_ghast.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Cherry_Boat_with_Chest.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">纵横七海</td>
+    <td style="width:200px;">发现所有的海洋生物群系</td>
+    <td style="width:100px;"><samp>world/all_ocean.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Wayfinder_Armor_Trim.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">古代铁匠</td>
+    <td style="width:200px;">刷扫出能在古迹废墟中找到的所有种类的锻造模板</td>
+    <td style="width:100px;"><samp>world/all_ruins_template.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Golden_Boots.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">遗迹猎人</td>
+    <td style="width:200px;">发现所有的结构</td>
+    <td style="width:100px;"><samp>world/all_structures.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Armadillo_Scute.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">生物护甲</td>
+    <td style="width:200px;">捡起犰狳掉落的鳞甲</td>
+    <td style="width:100px;"><samp>world/armadillo_scute.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Armadillo_Spawn_Egg_Revision_2.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">这家伙壳可真硬！</td>
+    <td style="width:200px;">攻击一只蜷缩着的犰狳</td>
+    <td style="width:100px;"><samp>world/atk_armadillo.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Stone_Sword.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">别杀海豚！</td>
+    <td style="width:200px;">你这个怪物！</td>
+    <td style="width:100px;"><samp>world/attack_dolphin.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Terracotta.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">丹霞地貌</td>
+    <td style="width:200px;">造访恶地、疏林恶地和风蚀恶地</td>
+    <td style="width:100px;"><samp>world/badlands.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Lead.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">气球小贩</td>
+    <td style="width:200px;">用拴绳拴住快乐恶魂</td>
+    <td style="width:100px;"><samp>world/balloon.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Bamboo.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">另一种木头</td>
+    <td style="width:200px;">用剑砍几根竹子</td>
+    <td style="width:100px;"><samp>world/bamboo.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Bamboo.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">合理密植</td>
+    <td style="width:200px;">造访一片竹林</td>
+    <td style="width:100px;"><samp>world/bamboo_jungle.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Sand.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">潮汐之声</td>
+    <td style="width:200px;">造访沙滩、积雪沙滩和石岸</td>
+    <td style="width:100px;"><samp>world/beaches.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Potion_of_Invisibility.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">秘密潜入</td>
+    <td style="width:200px;">脱掉所有盔甲，喝下隐身药水，并偷偷潜入林地府邸</td>
+    <td style="width:100px;"><samp>world/be_invisibility_in_mansion.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Blue_Orchid.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">坚贞高洁</td>
+    <td style="width:200px;">采一朵兰花</td>
+    <td style="width:100px;"><samp>world/blue_orchid.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Oak_Boat.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">热气球</td>
+    <td style="width:200px;">用拴绳把船系在快乐恶魂身上</td>
+    <td style="width:100px;"><samp>world/boat_on_happy_ghast.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Acacia_Boat.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">骆绎不绝</td>
+    <td style="width:200px;">和骆驼同舟共济（提示：只有小骆驼能上船）</td>
+    <td style="width:100px;"><samp>world/boat_with_camel.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Bedrock.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">我再说一遍！没有基岩粉！</td>
+    <td style="width:200px;">你为何如此执迷不悟？</td>
+    <td style="width:100px;"><samp>world/brush_bedrock.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Brush.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">法老的遗物</td>
+    <td style="width:200px;">用刷子刷扫沙漠神殿内的可疑的沙子</td>
+    <td style="width:100px;"><samp>world/brush_desert_pyramid.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Suspicious_Sand.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">难溶物质</td>
+    <td style="width:200px;">用刷子刷扫海底废墟的可疑方块</td>
+    <td style="width:100px;"><samp>world/brush_ocean_ruin.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Suspicious_Gravel.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">沙砾掩埋的历史</td>
+    <td style="width:200px;">刷扫古迹废墟中可疑的沙砾</td>
+    <td style="width:100px;"><samp>world/brush_trails.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Bundle.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">提上行囊</td>
+    <td style="width:200px;">为你的冒险准备一个收纳袋来装一些杂七杂八的东西</td>
+    <td style="width:100px;"><samp>world/bundle.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Chest.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">宝藏猎人</td>
+    <td style="width:200px;">打开一个藏宝箱</td>
+    <td style="width:100px;"><samp>world/buried_treasure.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Cactus_Flower.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">临旱独自开</td>
+    <td style="width:200px;">采一朵仙人掌花</td>
+    <td style="width:100px;"><samp>world/cactus_flower.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Cherry_Leaves.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">樱花源记</td>
+    <td style="width:200px;">造访樱花树林并采一些粉红色花簇</td>
+    <td style="width:100px;"><samp>world/cherry_forest.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Chest.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">另一种搬家方式</td>
+    <td style="width:200px;">给羊驼装上箱子</td>
+    <td style="width:100px;"><samp>world/chest_on_llama.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Coast_Armor_Trim.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">海盗制服</td>
+    <td style="width:200px;">获得海岸盔甲纹饰锻造模板</td>
+    <td style="width:100px;"><samp>world/coast_template.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Snow_Block.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">冰天雪地</td>
+    <td style="width:200px;">造访雪原和冻河</td>
+    <td style="width:100px;"><samp>world/cold_place.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Powder_Snow_Bucket.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">堆个雪堡</td>
+    <td style="width:200px;">用桶装一些细雪</td>
+    <td style="width:100px;"><samp>world/collect_powder_snow.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Conduit.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">默斯肯漩涡</td>
+    <td style="width:200px;">制作一个潮涌核心</td>
+    <td style="width:100px;"><samp>world/conduit.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Fire_Coral.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">缤纷珊瑚</td>
+    <td style="width:200px;">在暖水海洋里发现珊瑚礁</td>
+    <td style="width:100px;"><samp>world/corals.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Creaking_Heart.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">核心能源</td>
+    <td style="width:200px;">获取嘎枝之心</td>
+    <td style="width:100px;"><samp>world/creaking_heart.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Dark_Oak_Log.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">黑暗森林</td>
+    <td style="width:200px;">在晚上造访黑森林或许不是个好主意……</td>
+    <td style="width:100px;"><samp>world/dark_forest.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Dead_Bush.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">枯枝败叶</td>
+    <td style="width:200px;">获得枯萎的灌木</td>
+    <td style="width:100px;"><samp>world/dead_bush.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Sand.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">风干物燥</td>
+    <td style="width:200px;">造访沙漠并挖下来一块沙子</td>
+    <td style="width:100px;"><samp>world/desert.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Sandstone_Wall.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">古人的智慧</td>
+    <td style="width:200px;">制作一个潮涌核心<sup>[<a href="https://zh.wikipedia.org/wiki/sic">原文如此</a>]</sup></td>
+    <td style="width:100px;"><samp>world/desert_pyramid.json</samp></td>
+    <td style="width:200px;">进入<a href="https://zh.minecraft.wiki/w/%E6%B2%99%E6%BC%A0%E7%A5%9E%E6%AE%BF">沙漠神殿</a></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Chest.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">法老的遗物</td>
+    <td style="width:200px;">打开沙漠神殿地板下面的战利品箱</td>
+    <td style="width:100px;"><samp>world/desert_pyramid_chest.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Dolphin_Spawn_Egg_Revision_2.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">人类的好伙伴</td>
+    <td style="width:200px;">接受海豚的祝福吧！</td>
+    <td style="width:100px;"><samp>world/dolphins_grace.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Awkward_Potion.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">极恶世界</td>
+    <td style="width:200px;">在炎热的恶地喝一瓶水，尽管这没有任何意义</td>
+    <td style="width:100px;"><samp>world/drink_in_badlands.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Glass_Bottle.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">呼吸困难</td>
+    <td style="width:200px;">耗尽氧气</td>
+    <td style="width:100px;"><samp>world/drown.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Dune_Armor_Trim.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">华丽木乃伊</td>
+    <td style="width:200px;">获得沙丘盔甲纹饰锻造模板</td>
+    <td style="width:100px;"><samp>world/dune_template.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Eye_of_Ender.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">神秘之眼</td>
+    <td style="width:200px;">用烈焰粉和末影珍珠合成一些末影之眼</td>
+    <td style="width:100px;"><samp>world/ender_eye.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Open_Eyeblossom.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">“眼花”缭乱</td>
+    <td style="width:200px;">采下一株眼眸花</td>
+    <td style="width:100px;"><samp>world/eyeblossom.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Eye_Armor_Trim.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">奇怪的石板</td>
+    <td style="width:200px;">这锻造模板的石材也太奇怪了……</td>
+    <td style="width:100px;"><samp>world/eye_armor_trim.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Elytra.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">滑翔翼</td>
+    <td style="width:200px;">穿着鞘翅滑翔</td>
+    <td style="width:100px;"><samp>world/fall_flying.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Raw_Cod.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">海洋交易</td>
+    <td style="width:200px;">给海豚喂鱼，然后跟着它</td>
+    <td style="width:100px;"><samp>world/feed_dolphin.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Fox_Spawn_Egg_Revision_2.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">毛茸茸的“伙伴”</td>
+    <td style="width:200px;">用甜浆果喂食狐狸来博取它的信任</td>
+    <td style="width:100px;"><samp>world/feed_fox.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Happy_Ghast_Spawn_Egg.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">水宝宝</td>
+    <td style="width:200px;">喂给小恶魂雪球来让它快速长大</td>
+    <td style="width:100px;"><samp>world/feed_ghastling.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Panda_Spawn_Egg_Revision_2.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">珍稀动物</td>
+    <td style="width:200px;">喂食一只熊猫</td>
+    <td style="width:100px;"><samp>world/feed_panda.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Fern.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">蕨！</td>
+    <td style="width:200px;">获得蕨或大型蕨</td>
+    <td style="width:100px;"><samp>world/fern.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Firefly_Bush.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">萤萤光亮</td>
+    <td style="width:200px;">找到一株萤火虫灌木丛</td>
+    <td style="width:100px;"><samp>world/firefly_bush.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Poppy.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">自然主义</td>
+    <td style="width:200px;">采一些蒲公英和虞美人</td>
+    <td style="width:100px;"><samp>world/flower.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Dandelion.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">百花齐放</td>
+    <td style="width:200px;">造访繁花森林</td>
+    <td style="width:100px;"><samp>world/flower_forest.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Oak_Log.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">基础生态</td>
+    <td style="width:200px;">造访森林和桦木森林</td>
+    <td style="width:100px;"><samp>world/forests.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Sweet_Berries.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">完美的交易！</td>
+    <td style="width:200px;">扔给狐狸甜浆果来让它吐出嘴里的物品</td>
+    <td style="width:100px;"><samp>world/fox_trade.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Fire_Charge.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">水火不容</td>
+    <td style="width:200px;">不小心用恶魂的火球干掉一只快乐恶魂（真是不小心吗？）</td>
+    <td style="width:100px;"><samp>world/ghast_kill_happy_ghast.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Goat_Horn.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">天然乐器</td>
+    <td style="width:200px;">躲过山羊的冲撞，捡起并吹响它们掉的角</td>
+    <td style="width:100px;"><samp>world/goat_horn.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_White_Harness.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">追逐天空</td>
+    <td style="width:200px;">制作一套挽具并给快乐恶魂安上，然后骑上快乐恶魂翱翔天际</td>
+    <td style="width:100px;"><samp>world/harness.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Heart_of_the_Sea.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">海的力量我知道</td>
+    <td style="width:200px;">获取海洋之心</td>
+    <td style="width:100px;"><samp>world/heart_of_the_sea.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Infested_Stone.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">登高望远</td>
+    <td style="width:200px;">站在主世界y=128的方块上</td>
+    <td style="width:100px;"><samp>world/high_place.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Cactus.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">这个东西扎人！</td>
+    <td style="width:200px;">被仙人掌扎伤</td>
+    <td style="width:100px;"><samp>world/hurt_by_cactus.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Goat_Spawn_Egg_Revision_2.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">起飞！</td>
+    <td style="width:200px;">被山羊撞飞</td>
+    <td style="width:100px;"><samp>world/hurt_by_goat.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Trident.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">波塞冬？！</td>
+    <td style="width:200px;">被溺尸用三叉戟刺中</td>
+    <td style="width:100px;"><samp>world/hurt_by_trident.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Creaking_Spawn_Egg_Revision_2.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">将心比心</td>
+    <td style="width:200px;">嘎枝：“不吃这套，谢谢”</td>
+    <td style="width:100px;"><samp>world/hurt_creaking.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Trident.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">抓到一条大鱼！</td>
+    <td style="width:200px;">用附有穿刺魔咒的三叉戟攻击一只远古守卫者</td>
+    <td style="width:100px;"><samp>world/hurt_elder_guardian.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Prismarine_Shard.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">带刺的鱼？</td>
+    <td style="width:200px;">攻击一只守卫者</td>
+    <td style="width:100px;"><samp>world/hurt_guardian.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Spruce_Boat.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">冰面飞船</td>
+    <td style="width:200px;">把船放在冰上，坐上去，然后狂飙</td>
+    <td style="width:100px;"><samp>world/ice_boat.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Blue_Ice.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">冰塔林？</td>
+    <td style="width:200px;">造访冰刺之地</td>
+    <td style="width:100px;"><samp>world/ice_spikes.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Ice.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">温馨小屋</td>
+    <td style="width:200px;">找到一处雪屋</td>
+    <td style="width:100px;"><samp>world/igloo.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Potion_of_Weakness.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">废弃实验室？</td>
+    <td style="width:200px;">打开雪屋地下室的箱子，然后思考这里存在的意义……</td>
+    <td style="width:100px;"><samp>world/igloo_chest.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Spruce_Wood.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">终岁常端正</td>
+    <td style="width:200px;">造访原始松木针叶林和原始云杉针叶林</td>
+    <td style="width:100px;"><samp>world/in_old_taiga.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Pale_Hanging_Moss.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">躁动之园……</td>
+    <td style="width:200px;">待在苍白之园内并等到晚上</td>
+    <td style="width:100px;"><samp>world/in_pale_garden_at_night.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Powder_Snow_Bucket.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">进退两难</td>
+    <td style="width:200px;">陷入细雪中</td>
+    <td style="width:100px;"><samp>world/in_powder_snow.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Sweet_Berries.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">这玩意扎人！</td>
+    <td style="width:200px;">走到甜浆果丛里</td>
+    <td style="width:100px;"><samp>world/in_sweet_berry_bush.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Spruce_Sapling.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">遍地云杉</td>
+    <td style="width:200px;">造访针叶林和积雪针叶林</td>
+    <td style="width:100px;"><samp>world/in_taiga.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Turtle_Helmet.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">蛟龙号</td>
+    <td style="width:200px;">穿戴海龟壳并潜至深海类生物群系的y&lt;-50处</td>
+    <td style="width:100px;"><samp>world/jiao_long.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Jungle_Sapling.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">植被繁盛</td>
+    <td style="width:200px;">造访丛林和稀疏丛林</td>
+    <td style="width:100px;"><samp>world/jungle.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Mossy_Cobblestone.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">玛雅遗迹</td>
+    <td style="width:200px;">造访丛林神庙</td>
+    <td style="width:100px;"><samp>world/jungle_pyramid.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Kelp.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">海底森林</td>
+    <td style="width:200px;">在海底发现一些海带</td>
+    <td style="width:100px;"><samp>world/kelp.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Netherite_Axe.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">嘎然而止</td>
+    <td style="width:200px;">破坏嘎枝之心以击杀嘎枝</td>
+    <td style="width:100px;"><samp>world/kill_creaking.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Cooked_Cod.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">炸小鱼干</td>
+    <td style="width:200px;">用TNT炸死一只守卫者</td>
+    <td style="width:100px;"><samp>world/kill_guardian_by_tnt.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Leather.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">另一种皮革来源</td>
+    <td style="width:200px;">击杀一只羊驼</td>
+    <td style="width:100px;"><samp>world/kill_llama.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Lead.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">丝绸之路</td>
+    <td style="width:200px;">给骆驼系上拴绳</td>
+    <td style="width:100px;"><samp>world/lead_camel.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Lead.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">游子归家</td>
+    <td style="width:200px;">对身处热带高原的行商羊驼使用拴绳</td>
+    <td style="width:100px;"><samp>world/lead_trader_llama.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Leaf_Litter.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">落叶归根</td>
+    <td style="width:200px;">捡起一些树下的枯叶</td>
+    <td style="width:100px;"><samp>world/leaf_litter.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Lily_of_the_Valley.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">可闻而不可食</td>
+    <td style="width:200px;">采集一些铃兰，最好别加在你的炖菜里</td>
+    <td style="width:100px;"><samp>world/lily_of_the_valley.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Mangrove_Leaves.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">根系错落</td>
+    <td style="width:200px;">造访红树林沼泽</td>
+    <td style="width:100px;"><samp>world/mangrove_swamp.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Dark_Oak_Planks.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">军事指挥所</td>
+    <td style="width:200px;">进入林地府邸</td>
+    <td style="width:100px;"><samp>world/mansion.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Chest.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">翻箱倒柜</td>
+    <td style="width:200px;">打开林地府邸的战利品箱</td>
+    <td style="width:100px;"><samp>world/mansion_chest.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Dirt_Path.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">花卉盈野</td>
+    <td style="width:200px;">造访草甸并采一些野花</td>
+    <td style="width:100px;"><samp>world/meadow.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Prismarine.gif" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">亚特兰蒂斯</td>
+    <td style="width:200px;">发现一处海底神殿</td>
+    <td style="width:100px;"><samp>world/monument.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Mushroom_Stew.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">蘑菇爱好者的天堂</td>
+    <td style="width:200px;">从哞菇那里取得蘑菇煲</td>
+    <td style="width:100px;"><samp>world/mooshroom_stew.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Red_Mushroom_Block.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">神秘岛</td>
+    <td style="width:200px;">造访蘑菇岛</td>
+    <td style="width:100px;"><samp>world/mushroom_fields.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Red_Mushroom.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">蘑菇胜地！</td>
+    <td style="width:200px;">在针叶林里找到一些蘑菇</td>
+    <td style="width:100px;"><samp>world/mushroom_in_taiga.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Nautilus_Shell.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">黄金螺旋</td>
+    <td style="width:200px;">从溺尸手里抢来一个鹦鹉螺壳</td>
+    <td style="width:100px;"><samp>world/nautilus_shell.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Pale_Oak_Sapling.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">潜然而生</td>
+    <td style="width:200px;">有什么东西……</td>
+    <td style="width:100px;"><samp>world/near_creaking.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Cracked_Stone_Bricks.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">海底村庄？</td>
+    <td style="width:200px;">发现一处海底废墟</td>
+    <td style="width:100px;"><samp>world/ocean_ruin.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Birch_Log.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">群白林立</td>
+    <td style="width:200px;">造访原始桦木森林</td>
+    <td style="width:100px;"><samp>world/old_growth_birch_forest.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Packed_Ice.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">雪山之巅</td>
+    <td style="width:200px;">造访尖峭山峰和冰封山峰</td>
+    <td style="width:100px;"><samp>world/peaks.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Peony.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">国色天香</td>
+    <td style="width:200px;">采集一些牡丹</td>
+    <td style="width:100px;"><samp>world/peony.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Sweet_Berries.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">采浆果的小姑娘</td>
+    <td style="width:200px;">采下几颗甜浆果</td>
+    <td style="width:100px;"><samp>world/pick_sweet_berry.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Crossbow.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">敌方根据地</td>
+    <td style="width:200px;">找到一处掠夺者前哨站</td>
+    <td style="width:100px;"><samp>world/pillager_outpost.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Music_Disc_Relic.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">余音绕梁</td>
+    <td style="width:200px;">在古迹废墟中扫出Relic唱片</td>
+    <td style="width:100px;"><samp>world/relic_disc.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Resin_Clump.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">树的血液</td>
+    <td style="width:200px;">破坏凝结在苍白橡树上的树脂团来获取它</td>
+    <td style="width:100px;"><samp>world/resin_clump.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Birch_Boat.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">沙漠之舟</td>
+    <td style="width:200px;">骑上一只骆驼</td>
+    <td style="width:100px;"><samp>world/ride_camel.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Llama_Spawn_Egg_Revision_2.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">羊驼还是骆马</td>
+    <td style="width:200px;">骑上一只羊驼</td>
+    <td style="width:100px;"><samp>world/ride_llama.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Oak_Sapling.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">世界</td>
+    <td style="width:200px;">游历这个世界！</td>
+    <td style="width:100px;"><samp>world/root.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Obsidian.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">残垣断壁</td>
+    <td style="width:200px;">打开一个废弃传送门的战利品箱</td>
+    <td style="width:100px;"><samp>world/ruined_portal.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Birch_Sapling.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">防风固沙</td>
+    <td style="width:200px;">在沙漠种下一颗树苗，尽管不会改变生物群系……</td>
+    <td style="width:100px;"><samp>world/sapling_in_desert.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Acacia_Sapling.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">萨瓦纳草原</td>
+    <td style="width:200px;">造访热带草原和热带高原</td>
+    <td style="width:100px;"><samp>world/savanna.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Water_Bucket.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">茫茫大海</td>
+    <td style="width:200px;">潜入海洋中——一类占Minecraft世界至少25%%的生物群系</td>
+    <td style="width:100px;"><samp>world/sea.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Seagrass.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">随波漂摇</td>
+    <td style="width:200px;">用剪刀剪一些海草</td>
+    <td style="width:100px;"><samp>world/seagrass.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Sea_Pickle.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">生态光源</td>
+    <td style="width:200px;">采集一些海泡菜</td>
+    <td style="width:100px;"><samp>world/sea_pickle.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Sentry_Armor_Trim.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">军衔标识</td>
+    <td style="width:200px;">在掠夺者前哨站里找到哨兵盔甲纹饰锻造模板</td>
+    <td style="width:100px;"><samp>world/sentry_armor_trim.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Shears.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">裁剪万物</td>
+    <td style="width:200px;">制作一把剪刀来剪些什么</td>
+    <td style="width:100px;"><samp>world/shears.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Spruce_Boat.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">海盗遗迹</td>
+    <td style="width:200px;">发现一处沉船</td>
+    <td style="width:100px;"><samp>world/shipwreck.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Grass.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">草！</td>
+    <td style="width:200px;">剪一些矮草丛</td>
+    <td style="width:100px;"><samp>world/short_grass.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Snowball.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">扔出去试试？</td>
+    <td style="width:200px;">铲一些雪球</td>
+    <td style="width:100px;"><samp>world/snowball.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Snow.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">雪层深厚</td>
+    <td style="width:200px;">造访雪林和积雪山坡（走路小心点）</td>
+    <td style="width:100px;"><samp>world/snowy_mountains.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Bamboo.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">武林高手</td>
+    <td style="width:200px;">站在一根成熟的竹子上</td>
+    <td style="width:100px;"><samp>world/stand_on_bamboo.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Empty_Locator_Map.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">冒险启程</td>
+    <td style="width:200px;">为你的冒险准备好一张床、一个工作台、64块木板、64块圆石和满满的勇气！</td>
+    <td style="width:100px;"><samp>world/start.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Stick.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">流落荒野</td>
+    <td style="width:200px;">以你意想不到的方式得到一根木棍</td>
+    <td style="width:100px;"><samp>world/stick.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Chest.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">硬盘、小U盘、大U盘、网盘</td>
+    <td style="width:200px;">在你的物品栏里放上箱子、收纳袋、潜影盒、末影箱</td>
+    <td style="width:100px;"><samp>world/storage.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Brown_Mushroom_Block.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">神秘转化</td>
+    <td style="width:200px;">雷击一只哞菇（其实再劈一次能变回来）</td>
+    <td style="width:100px;"><samp>world/strike_mooshroom.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Vines.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">泥泞之地</td>
+    <td style="width:200px;">发现一处沼泽和一处红树林沼泽</td>
+    <td style="width:100px;"><samp>world/swamp.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Cauldron.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">药剂师和她的黑猫</td>
+    <td style="width:200px;">在沼泽里发现一处沼泽小屋</td>
+    <td style="width:100px;"><samp>world/swamp_hut.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Tall_Grass.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">不可再生草</td>
+    <td style="width:200px;">在热带草原村庄找到高草丛（很生草不是吗？）</td>
+    <td style="width:100px;"><samp>world/tall_grass.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Sculk.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">没逝找逝</td>
+    <td style="width:200px;">用雪球砸监守者</td>
+    <td style="width:100px;"><samp>world/taunt_warden.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Snowball.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">打雪仗</td>
+    <td style="width:200px;">扔雪球砸中生物</td>
+    <td style="width:100px;"><samp>world/throw_snowball.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Tide_Armor_Trim.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">潮涌护佑</td>
+    <td style="width:200px;">击杀一只远古守卫者并获得潮汐盔甲纹饰锻造模板</td>
+    <td style="width:100px;"><samp>world/tide_armor_trim.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Pale_Oak_Log.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">宁静之园？</td>
+    <td style="width:200px;">在白天到达苍白之园</td>
+    <td style="width:100px;"><samp>world/to_pale_garden.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Mud_Bricks.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">往事残骸</td>
+    <td style="width:200px;">发现一处古迹废墟</td>
+    <td style="width:100px;"><samp>world/trail_ruins.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Buried_Treasure_Map.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">指引宝藏</td>
+    <td style="width:200px;">找到一张藏宝图</td>
+    <td style="width:100px;"><samp>world/treasure_map.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Red_Tulip.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">四色花</td>
+    <td style="width:200px;">采集四种郁金香</td>
+    <td style="width:100px;"><samp>world/tulip.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Scute.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">这不也是鳞甲么</td>
+    <td style="width:200px;">制作一把剪刀来剪些什么</td>
+    <td style="width:100px;"><samp>world/turtle_scute.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Brush.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">你搁这扫地呢</td>
+    <td style="width:200px;">用刷子扫点什么</td>
+    <td style="width:100px;"><samp>world/use_brush.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Vex_Armor_Trim.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">魔法袍纹</td>
+    <td style="width:200px;">在林地府邸里找到恼鬼盔甲纹饰锻造模板</td>
+    <td style="width:100px;"><samp>world/vex_armor_trim.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Oak_Planks.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">屋舍俨然</td>
+    <td style="width:200px;">找到一处平原村庄</td>
+    <td style="width:100px;"><samp>world/village.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Sandstone.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">绿洲农业</td>
+    <td style="width:200px;">找到一处沙漠村庄</td>
+    <td style="width:100px;"><samp>world/village_desert.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Acacia_Planks.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">热带高脚屋</td>
+    <td style="width:200px;">找到一处热带草原村庄</td>
+    <td style="width:100px;"><samp>world/village_savanna.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Snow_Block.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">因纽特人</td>
+    <td style="width:200px;">找到一处雪原村庄</td>
+    <td style="width:100px;"><samp>world/village_snowy.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Spruce_Planks.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">中世纪村庄</td>
+    <td style="width:200px;">找到一处针叶林村庄</td>
+    <td style="width:100px;"><samp>world/village_taiga.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Echo_Shard.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">借刀杀人</td>
+    <td style="width:200px;">把一个监守者引到林地府邸中，注视着它，并坐享其成</td>
+    <td style="width:100px;"><samp>world/warden_in_mansion.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Leather_Tunic.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">论如何御寒</td>
+    <td style="width:200px;">穿上全套皮革衣服</td>
+    <td style="width:100px;"><samp>world/warm.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Sand.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">温暖洋流</td>
+    <td style="width:200px;">造访暖水海洋</td>
+    <td style="width:100px;"><samp>world/warm_ocean.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Wet_Sponge.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">沧浪拾遗</td>
+    <td style="width:200px;">在海底神殿里找到一块湿海绵</td>
+    <td style="width:100px;"><samp>world/wet_sponge.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Wildflowers.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">花团锦簇</td>
+    <td style="width:200px;">采摘一些野花簇</td>
+    <td style="width:100px;"><samp>world/wildflowers.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Wild_Armor_Trim.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">覆满苔藓的青石板</td>
+    <td style="width:200px;">在丛林神庙里找到荒野盔甲纹饰锻造模板</td>
+    <td style="width:100px;"><samp>world/wild_armor_trim.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Gravel.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">萧寒凄清</td>
+    <td style="width:200px;">造访风袭丘陵、风袭森林或风袭沙砾丘陵</td>
+    <td style="width:100px;"><samp>world/windswept.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Coarse_Dirt.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">支离破碎</td>
+    <td style="width:200px;">造访山势险峻的风袭热带草原</td>
+    <td style="width:100px;"><samp>world/windswept_savanna.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Grass_Block.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">世界之原点</td>
+    <td style="width:200px;">到达这个世界的(0, 0)坐标处</td>
+    <td style="width:100px;"><samp>world/world_center.json</samp></td>
+</tr>
+</table></div></body></html>

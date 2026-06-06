@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="../icon.png">
+        <title>tech</title>
+        <style>
+            *
+            {
+                font-family: Arial, "SimHei", "黑体", "Noto Sans SC", sans-serif;
+            }
+            #homepage_border
+            {
+                border-radius: 5px;
+                border: 2px solid silver;
+                background-color: lightgrey;
+                cursor: default;
+            }
+            .homepage_inner
+            {
+                background-color: whitesmoke;
+                display: inline-block;
+                width: calc(var(--width_of_border) * 0.5 - 4.25px);
+                cursor: pointer;
+            }
+            a:link {
+                color: blue;
+                text-decoration: none;
+            }
+            a:visited {
+                color: MediumBlue;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            table {
+                border-collapse: collapse;
+                border: 1px solid black;
+            }
+            tr {
+                border: 1px solid black;
+            }
+            th {
+                border: 1px solid black;
+            }
+            td {
+                border: 1px solid black;
+            }
+            pre.samp {
+                font-family: "JetBrainsMono", "Consolas", monospace;
+            }
+            samp {
+                font-family: "JetBrainsMono", "Consolas", monospace;
+            }
+            body {
+                overflow: hidden;
+            }
+            #main {
+                position: relative;
+                top: 55px;
+                overflow: hidden auto;
+                height: calc(var(--height_of_window) - 70px);
+            }
+        </style>
+        <script>
+            function homepage_resize_update_border(){
+                const element_border = document.getElementById("homepage_border");
+                element_border_width = element_border.offsetWidth;
+                element_border.style.setProperty("--width_of_border", element_border_width + "px");
+                document.body.style.setProperty("--height_of_window", window.innerHeight + "px");
+            }
+            window.addEventListener("resize", () => {
+                homepage_resize_update_border();
+            });
+        </script>
+    </head>
+    <body>
+        <div style="position: absolute; margin: 16px; left: 0px; right: 0px; top: 0px;">
+            <div id="homepage_border">
+                <div class="homepage_inner" onclick="window.location.href = '../index.html';" style="background-color: lawngreen;">
+                    <p style="padding: 5px; margin: 0; text-align: center;">More Advancements</p>
+                </div>
+                <div class="homepage_inner" onclick="window.location.href = '../madv_plus.html';">
+                    <p style="padding: 5px; margin: 0; text-align: center; color: black; text-decoration: none;">More Advancements Plus</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            homepage_resize_update_border();
+        </script>
+        <div id="main">
+            <p style="margin: 5px;">在More Advancements中，tech<sup>[暂无名称]</sup>选项卡一共有4个进度，但这4个进度均不会显示。因此，实际上无法打开tech选项卡。</p>
+        </div>
+    </body>
+</html>

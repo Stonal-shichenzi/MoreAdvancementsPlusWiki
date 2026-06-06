@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="../icon.png">
+        <title>采掘</title>
+        <style>
+            *
+            {
+                font-family: Arial, "SimHei", "黑体", "Noto Sans SC", sans-serif;
+            }
+            #homepage_border
+            {
+                border-radius: 5px;
+                border: 2px solid silver;
+                background-color: lightgrey;
+                cursor: default;
+            }
+            .homepage_inner
+            {
+                background-color: whitesmoke;
+                display: inline-block;
+                width: calc(var(--width_of_border) * 0.5 - 4.25px);
+                cursor: pointer;
+            }
+            a:link {
+                color: blue;
+                text-decoration: none;
+            }
+            a:visited {
+                color: MediumBlue;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            table {
+                border-collapse: collapse;
+                border: 1px solid black;
+            }
+            tr {
+                border: 1px solid black;
+            }
+            th {
+                border: 1px solid black;
+            }
+            td {
+                border: 1px solid black;
+            }
+            pre.samp {
+                font-family: "JetBrainsMono", "Consolas", monospace;
+            }
+            samp {
+                font-family: "JetBrainsMono", "Consolas", monospace;
+            }
+            body {
+                overflow: hidden;
+            }
+            #main {
+                position: relative;
+                top: 55px;
+                overflow: hidden auto;
+                height: calc(var(--height_of_window) - 70px);
+            }
+        </style>
+        <script>
+            function homepage_resize_update_border(){
+                const element_border = document.getElementById("homepage_border");
+                element_border_width = element_border.offsetWidth;
+                element_border.style.setProperty("--width_of_border", element_border_width + "px");
+                document.body.style.setProperty("--height_of_window", window.innerHeight + "px");
+            }
+            window.addEventListener("resize", () => {
+                homepage_resize_update_border();
+            });
+        </script>
+    </head>
+    <body>
+        <div style="position: absolute; margin: 16px; left: 0px; right: 0px; top: 0px;">
+            <div id="homepage_border">
+                <div class="homepage_inner" onclick="window.location.href = '../index.html';" style="background-color: lawngreen;">
+                    <p style="padding: 5px; margin: 0; text-align: center;">More Advancements</p>
+                </div>
+                <div class="homepage_inner" onclick="window.location.href = '../madv_plus.html';">
+                    <p style="padding: 5px; margin: 0; text-align: center; color: black; text-decoration: none;">More Advancements Plus</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            homepage_resize_update_border();
+        </script><div id="main">
+        <p style="margin: 5px;">在More Advancements中，“采掘”选项卡一共有96个进度：</p>
+        <table>
+            <tr>
+                <th style="text-align: center;">图标</td>
+                <th style="text-align: center;">标题</td>
+                <th style="text-align: center;">描述</td>
+                <th style="text-align: center;">文件路径</td>
+            </tr><tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Block_of_Coal.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">山西煤老板</td>
+    <td style="width:200px;">获取64个煤炭块</td>
+    <td style="width:100px;"><samp>mine/64_coal_blocks.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Cobblestone.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">采石工</td>
+    <td style="width:200px;">挖取64个圆石</td>
+    <td style="width:100px;"><samp>mine/64_cobblestone.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Block_of_Diamond.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">我们之中出了个大人物！</td>
+    <td style="width:200px;">那个人是怎么挖到64个钻石块的？！</td>
+    <td style="width:100px;"><samp>mine/64_diamond_block.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Block_of_Gold.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">财富溢出</td>
+    <td style="width:200px;">获得64个金块以彰显你的财富</td>
+    <td style="width:100px;"><samp>mine/64_gold_block.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Block_of_Iron.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">工业骨骼</td>
+    <td style="width:200px;">制作一组铁块！</td>
+    <td style="width:100px;"><samp>mine/64_iron_block.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Diamond.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">矿石专家</td>
+    <td style="width:200px;">获得所有矿物原材料</td>
+    <td style="width:100px;"><samp>mine/all_mineral.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Deepslate_Emerald_Ore.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">开山之作</td>
+    <td style="width:200px;">获得所有矿石</td>
+    <td style="width:100px;"><samp>mine/all_ores.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Diorite.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">地质学家</td>
+    <td style="width:200px;">获得所有种类的岩石</td>
+    <td style="width:100px;"><samp>mine/all_rock.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Amethyst_Shard.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">音乐水晶</td>
+    <td style="width:200px;">在紫晶洞里挖到紫水晶碎片</td>
+    <td style="width:100px;"><samp>mine/amethyst_shard.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Blast_Furnace.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">专一优化</td>
+    <td style="width:200px;">制作一个高炉</td>
+    <td style="width:100px;"><samp>mine/blast_furnace.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Wooden_Pickaxe.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">不止三点</td>
+    <td style="width:200px;">用坏一把木镐
+（你就这么喜爱你的木镐吗？）</td>
+    <td style="width:100px;"><samp>mine/break_wooden_pickaxe.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Calcite.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">CaCO₃</td>
+    <td style="width:200px;">挖取一块方解石</td>
+    <td style="width:100px;"><samp>mine/calcite.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Chest.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">物品存储</td>
+    <td style="width:200px;">制作一个箱子</td>
+    <td style="width:100px;"><samp>mine/chest.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Mossy_Cobblestone.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">Minecraft：地下城</td>
+    <td style="width:200px;">打开一个地牢的战利品箱</td>
+    <td style="width:100px;"><samp>mine/chest_in_dungeon.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Ice.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">速冻保鲜</td>
+    <td style="width:200px;">打开一个远古城市冰窖的战利品箱</td>
+    <td style="width:100px;"><samp>mine/chest_in_ice_room.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Clock.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">分秒必争</td>
+    <td style="width:200px;">在暗无天日的洞穴中用时钟来了解时间</td>
+    <td style="width:100px;"><samp>mine/clock.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Coal.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">黑色黄金</td>
+    <td style="width:200px;">挖到黑乎乎的煤炭</td>
+    <td style="width:100px;"><samp>mine/coal.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Block_of_Coal.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">充分燃烧</td>
+    <td style="width:200px;">将9个煤炭合成为煤炭块，让火烧得更猛烈些吧！</td>
+    <td style="width:100px;"><samp>mine/coal_block.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Coal_Ore.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">相煎何太急？</td>
+    <td style="width:200px;">把煤矿石烧成煤炭</td>
+    <td style="width:100px;"><samp>mine/coal_smelt_coal.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Cobbled_Deepslate.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">新岩层</td>
+    <td style="width:200px;">挖取一块深板岩圆石</td>
+    <td style="width:100px;"><samp>mine/cobbled_deepslate.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Compass.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">家的方向</td>
+    <td style="width:200px;">制作一个指南针来定位世界出生点</td>
+    <td style="width:100px;"><samp>mine/compass.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Block_of_Copper.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">梆！</td>
+    <td style="width:200px;">放置一个铜块</td>
+    <td style="width:100px;"><samp>mine/copper_block.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Minecart_with_Chest.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">循轨蹈矩</td>
+    <td style="width:200px;">让铜傀儡坐在矿车上，然后让它去分拣你的巨大仓库吧！</td>
+    <td style="width:100px;"><samp>mine/copper_golem_on_minecart.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Copper_Ingot.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">优质导体</td>
+    <td style="width:200px;">冶炼出一块铜锭</td>
+    <td style="width:100px;"><samp>mine/copper_ingot.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Copper_Pickaxe.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">铜器时代</td>
+    <td style="width:200px;">制作一把铜镐</td>
+    <td style="width:100px;"><samp>mine/copper_pickaxe.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Netherite_Pickaxe.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">鞠躬尽瘁，死而后已</td>
+    <td style="width:200px;">用坏一把附有耐久III的下界合金镐</td>
+    <td style="width:100px;"><samp>mine/destory_netherite_pickaxe.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Wooden_Pickaxe.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">该死！坏掉了</td>
+    <td style="width:200px;">用坏一把工具</td>
+    <td style="width:100px;"><samp>mine/destory_tools.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Copper_Axe.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">除锈迎新</td>
+    <td style="width:200px;">记得保养好你的铜傀儡，别让他傻掉了！</td>
+    <td style="width:100px;"><samp>mine/dewax_copper_golem.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Diamond.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">给你钻石！</td>
+    <td style="width:200px;">把钻石扔到别的玩家那儿</td>
+    <td style="width:100px;"><samp>mine/diamonds_to_you.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Block_of_Diamond.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">令人垂涎欲滴的方块</td>
+    <td style="width:200px;">制作一个钻石块</td>
+    <td style="width:100px;"><samp>mine/diamond_block.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Diamond_Pickaxe.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">金刚钻</td>
+    <td style="width:200px;">制作一把钻石镐</td>
+    <td style="width:100px;"><samp>mine/diamond_pickaxe.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Music_Disc_5.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">“5”</td>
+    <td style="width:200px;">制作5号唱片</td>
+    <td style="width:100px;"><samp>mine/disc_5.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Glow_Berries.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">矿工浆果</td>
+    <td style="width:200px;">吃掉一个发光浆果</td>
+    <td style="width:100px;"><samp>mine/eat_glow_berries.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Rotten_Flesh.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">强大的胃</td>
+    <td style="width:200px;">吃腐肉充饥</td>
+    <td style="width:100px;"><samp>mine/eat_rotten_flesh.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Echo_Shard.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">深渊的回响</td>
+    <td style="width:200px;">获得回响碎片</td>
+    <td style="width:100px;"><samp>mine/echo_shard.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Emerald.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">流通货币</td>
+    <td style="width:200px;">获得绿宝石</td>
+    <td style="width:100px;"><samp>mine/emerald.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Water_Bucket.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">用它装水！</td>
+    <td style="width:200px;">用铁桶装水</td>
+    <td style="width:100px;"><samp>mine/fill_bucket_with_water.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Flint.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">小心割伤！</td>
+    <td style="width:200px;">找到燧石</td>
+    <td style="width:100px;"><samp>mine/flint.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Flint_and_Steel.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">迸发火星</td>
+    <td style="width:200px;">制作一个打火石</td>
+    <td style="width:100px;"><samp>mine/flint_and_steel.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Furnace.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">“热”门话题</td>
+    <td style="width:200px;">制作一个熔炉</td>
+    <td style="width:100px;"><samp>mine/furnace.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Sculk_Shrieker.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">警报迭起</td>
+    <td style="width:200px;">不好，你触发了幽匿尖啸体！</td>
+    <td style="width:100px;"><samp>mine/get_darkness.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Glow_Lichen.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">钻石？</td>
+    <td style="width:200px;">那只是个发光地衣</td>
+    <td style="width:100px;"><samp>mine/glow_lichen.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Golden_Pickaxe.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">华而不实</td>
+    <td style="width:200px;">制作一把金镐</td>
+    <td style="width:100px;"><samp>mine/golden_pickaxe.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Block_of_Gold.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">金砖</td>
+    <td style="width:200px;">制作一个金块</td>
+    <td style="width:100px;"><samp>mine/gold_block.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Gold_Ingot.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">金子！</td>
+    <td style="width:200px;">冶炼出一块金锭</td>
+    <td style="width:100px;"><samp>mine/gold_ingot.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Gravel.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">“碎”石</td>
+    <td style="width:200px;">挖到一块沙砾</td>
+    <td style="width:100px;"><samp>mine/gravel.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Infested_Stone.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">洞穴历险</td>
+    <td style="width:200px;">进入任意洞穴生物群系</td>
+    <td style="width:100px;"><samp>mine/into_cave.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Black_Concrete.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">堕入黑暗</td>
+    <td style="width:200px;">伸手不见五指</td>
+    <td style="width:100px;"><samp>mine/into_darkness.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Netherrack.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">下界矿工</td>
+    <td style="width:200px;">挖掘至下界y小于等于15的高度</td>
+    <td style="width:100px;"><samp>mine/into_deep_nether.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Deepslate.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">更下一层楼</td>
+    <td style="width:200px;">进入深层区域</td>
+    <td style="width:100px;"><samp>mine/into_deep_place.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Lava_Bucket.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">泡个温泉</td>
+    <td style="width:200px;">你试图在熔岩里游泳</td>
+    <td style="width:100px;"><samp>mine/into_lava.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Cobweb.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">前方限速！</td>
+    <td style="width:200px;">陷入蜘蛛网</td>
+    <td style="width:100px;"><samp>mine/in_cobweb.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Gold_Ore.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">淘金热</td>
+    <td style="width:200px;">在恶地的地下挖矿，这里有许多好东西</td>
+    <td style="width:100px;"><samp>mine/in_deep_badlands.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Lava_Bucket.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">落日六号</td>
+    <td style="width:200px;">淹没在下界最深处的熔岩中长达一个游戏日</td>
+    <td style="width:100px;"><samp>mine/in_deep_lava.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Gravel.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">矿难事故</td>
+    <td style="width:200px;">被沙子或沙砾掩埋住</td>
+    <td style="width:100px;"><samp>mine/in_gravel.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Block_of_Iron.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">金属的砖</td>
+    <td style="width:200px;">制作铁块</td>
+    <td style="width:100px;"><samp>mine/iron_block.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Iron_Nugget.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">九等分的铁</td>
+    <td style="width:200px;">制作一些铁粒</td>
+    <td style="width:100px;"><samp>mine/iron_nugget.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Golden_Boots.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">信仰之跃！</td>
+    <td style="width:200px;">从50格高的地方跳下来</td>
+    <td style="width:100px;"><samp>mine/jump_off_50b.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Sculk_Catalyst.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">潜滋暗长</td>
+    <td style="width:200px;">在幽匿催发体旁边击杀所有种类的敌对生物</td>
+    <td style="width:100px;"><samp>mine/kill_all_monsters_near_sculk_catalyst.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Bat_Spawn_Egg_Revision_2.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">吓死我了！</td>
+    <td style="width:200px;">你为什么会闲到去杀死蝙蝠？</td>
+    <td style="width:100px;"><samp>mine/kill_bat.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Silverfish_Spawn_Egg_Revision_4.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">令矿工厌烦的虱虫</td>
+    <td style="width:200px;">击杀一只蠹虫</td>
+    <td style="width:100px;"><samp>mine/kill_silverfish.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Water_Bucket.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">落地水！</td>
+    <td style="width:200px;">从30格及以上的高度跳入水中</td>
+    <td style="width:100px;"><samp>mine/landing_water.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Block_of_Lapis_Lazuli.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">铺路石</td>
+    <td style="width:200px;">你觉得青金石块为什么被用来铺路呢？</td>
+    <td style="width:100px;"><samp>mine/lapis_block.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Lapis_Lazuli.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">不可思议的魔法石</td>
+    <td style="width:200px;">它似乎蕴含着经验的力量！</td>
+    <td style="width:100px;"><samp>mine/lapis_lazuli.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Bedrock.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">没有基岩粉！</td>
+    <td style="width:200px;">你没装Ender IO！</td>
+    <td style="width:100px;"><samp>mine/light_bedrock.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Warden_Spawn_Egg_Revision_2.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">我们有麻烦了……</td>
+    <td style="width:200px;">我们的动静太大了……</td>
+    <td style="width:100px;"><samp>mine/near_warden.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Block_of_Netherite.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">史上最炫方块！</td>
+    <td style="width:200px;">下界合金块！炫死我了</td>
+    <td style="width:100px;"><samp>mine/netherite_block.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Netherite_Ingot.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">高级合金</td>
+    <td style="width:200px;">获得下界合金锭</td>
+    <td style="width:100px;"><samp>mine/netherite_ingot.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Bedrock.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">地心游记</td>
+    <td style="width:200px;">到达主世界最底层</td>
+    <td style="width:100px;"><samp>mine/on_the_deepist.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Oxidized_Copper.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">它氧化了！</td>
+    <td style="width:200px;">让铜块完全氧化</td>
+    <td style="width:100px;"><samp>mine/oxidized_copper.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Pointed_Dripstone.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">喀斯特地貌</td>
+    <td style="width:200px;">获得滴水石锥</td>
+    <td style="width:100px;"><samp>mine/pointed_dripstone.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Nether_Quartz.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">逻辑晶体</td>
+    <td style="width:200px;">挖到下界石英</td>
+    <td style="width:100px;"><samp>mine/quartz.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Raw_Copper.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">橙绿相间</td>
+    <td style="width:200px;">挖到粗铜</td>
+    <td style="width:100px;"><samp>mine/raw_copper.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Raw_Gold.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">是金子吗？</td>
+    <td style="width:200px;">挖到一块粗金</td>
+    <td style="width:100px;"><samp>mine/raw_gold.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Raw_Iron.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">待加工矿石</td>
+    <td style="width:200px;">挖到一块粗铁</td>
+    <td style="width:100px;"><samp>mine/raw_iron.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Block_of_Raw_Iron.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">育碧服务器</td>
+    <td style="width:200px;">制作粗铁块，粗铜块，粗金块</td>
+    <td style="width:100px;"><samp>mine/raw_mineral_block.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Recovery_Compass.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">追溯死亡的回响</td>
+    <td style="width:200px;">制作追溯指针</td>
+    <td style="width:100px;"><samp>mine/recovery_compass.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Redstone.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">红石能量</td>
+    <td style="width:200px;">挖到红石粉</td>
+    <td style="width:100px;"><samp>mine/redstone.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Infested_Stone.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">采掘</td>
+    <td style="width:200px;">做个矿工</td>
+    <td style="width:100px;"><samp>mine/root.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Sculk_Shrieker.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">幽匿狂热者</td>
+    <td style="width:200px;">获得所有种类的幽匿方块</td>
+    <td style="width:100px;"><samp>mine/sculk_blocks.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Skeleton_Spawn_Egg_Revision_3.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">谁™偷袭我</td>
+    <td style="width:200px;">骷髅找到了你！</td>
+    <td style="width:100px;"><samp>mine/skeleton_damage.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Flint_and_Steel.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">燃起火焰</td>
+    <td style="width:200px;">使用打火石打火</td>
+    <td style="width:100px;"><samp>mine/sparking.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Spore_Blossom.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">散布孢子</td>
+    <td style="width:200px;">这玩意为啥有孢子植物的孢子和被子植物的花？</td>
+    <td style="width:100px;"><samp>mine/spore_blossom.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Spyglass.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">物流分拣</td>
+    <td style="width:200px;">用望远镜观察正在分拣物品的铜傀儡</td>
+    <td style="width:100px;"><samp>mine/spyglass_copper_golem.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Stone_Shovel.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">石质工具包</td>
+    <td style="width:200px;">制作石镐、石斧、石锹和石锄</td>
+    <td style="width:100px;"><samp>mine/stone_tools.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Copper_Golem_Spawn_Egg.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">聘请员工</td>
+    <td style="width:200px;">召唤一只铜傀儡来帮忙整理你的箱子</td>
+    <td style="width:100px;"><samp>mine/summon_copper_golem.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Granite.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">三色杯</td>
+    <td style="width:200px;">获得花岗岩、闪长岩和安山岩</td>
+    <td style="width:100px;"><samp>mine/three_stone.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Netherite_Scrap.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">真“金”不怕火炼</td>
+    <td style="width:200px;">这玩意不怕熔岩？？？</td>
+    <td style="width:100px;"><samp>mine/throw_netherite_item.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Torch.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">照亮前方</td>
+    <td style="width:200px;">合成一些火把</td>
+    <td style="width:100px;"><samp>mine/torch.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Reinforced_Deepslate.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">失落的地下废都</td>
+    <td style="width:200px;">进入远古城市</td>
+    <td style="width:100px;"><samp>mine/to_ancient_city.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Sculk.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">寂静无声</td>
+    <td style="width:200px;">到达深暗之域。记得安静点！</td>
+    <td style="width:100px;"><samp>mine/to_deep_dark.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Minecart.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">废弃的矿井</td>
+    <td style="width:200px;">进入废弃矿井</td>
+    <td style="width:100px;"><samp>mine/to_mineshaft.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Tuff.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">固实压缩</td>
+    <td style="width:200px;">挖取一块凝灰岩</td>
+    <td style="width:100px;"><samp>mine/tuff.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Azalea.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">矿工的大救星！</td>
+    <td style="width:200px;">对杜鹃花丛使用骨粉</td>
+    <td style="width:100px;"><samp>mine/use_bone_meal_on_azalea.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Moss_Block.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">苔痕上阶绿</td>
+    <td style="width:200px;">对苔藓块使用骨粉使其蔓延</td>
+    <td style="width:100px;"><samp>mine/use_bone_meal_on_moss_block.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Spyglass.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">凸透镜成像</td>
+    <td style="width:200px;">使用望远镜观察远处</td>
+    <td style="width:100px;"><samp>mine/use_spyglass.json</samp></td>
+</tr>
+</table></div></body></html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="../icon.png">
+        <title>MC的小方块</title>
+        <style>
+            *
+            {
+                font-family: Arial, "SimHei", "黑体", "Noto Sans SC", sans-serif;
+            }
+            #homepage_border
+            {
+                border-radius: 5px;
+                border: 2px solid silver;
+                background-color: lightgrey;
+                cursor: default;
+            }
+            .homepage_inner
+            {
+                background-color: whitesmoke;
+                display: inline-block;
+                width: calc(var(--width_of_border) * 0.5 - 4.25px);
+                cursor: pointer;
+            }
+            a:link {
+                color: blue;
+                text-decoration: none;
+            }
+            a:visited {
+                color: MediumBlue;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            table {
+                border-collapse: collapse;
+                border: 1px solid black;
+            }
+            tr {
+                border: 1px solid black;
+            }
+            th {
+                border: 1px solid black;
+            }
+            td {
+                border: 1px solid black;
+            }
+            pre.samp {
+                font-family: "JetBrainsMono", "Consolas", monospace;
+            }
+            samp {
+                font-family: "JetBrainsMono", "Consolas", monospace;
+            }
+            body {
+                overflow: hidden;
+            }
+            #main {
+                position: relative;
+                top: 55px;
+                overflow: hidden auto;
+                height: calc(var(--height_of_window) - 70px);
+            }
+        </style>
+        <script>
+            function homepage_resize_update_border(){
+                const element_border = document.getElementById("homepage_border");
+                element_border_width = element_border.offsetWidth;
+                element_border.style.setProperty("--width_of_border", element_border_width + "px");
+                document.body.style.setProperty("--height_of_window", window.innerHeight + "px");
+            }
+            window.addEventListener("resize", () => {
+                homepage_resize_update_border();
+            });
+        </script>
+    </head>
+    <body>
+        <div style="position: absolute; margin: 16px; left: 0px; right: 0px; top: 0px;">
+            <div id="homepage_border">
+                <div class="homepage_inner" onclick="window.location.href = '../index.html';" style="background-color: lawngreen;">
+                    <p style="padding: 5px; margin: 0; text-align: center;">More Advancements</p>
+                </div>
+                <div class="homepage_inner" onclick="window.location.href = '../madv_plus.html';">
+                    <p style="padding: 5px; margin: 0; text-align: center; color: black; text-decoration: none;">More Advancements Plus</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            homepage_resize_update_border();
+        </script>
+        <div id="main">
+            <h1 style="font-family: Cambria, 'Times New Roman', SimSun, serif; margin: 5px;">MC的小方块</h1>
+            <hr>
+            <div style="position: relative; margin: 7px 50px; border-left: 7px solid rgb(85, 221, 85); background-color: rgb(204, 255, 204); padding: 4px 8px;">
+                <img src="https://zh.minecraft.wiki/images/thumb/Iron_Pickaxe_JE3_BE2.png/32px-Iron_Pickaxe_JE3_BE2.png" decoding="async" loading="lazy" width="32" height="32" style="margin: 3px 0px;">
+                <p style="position: absolute; top: 0px; left: 40px; margin: 7px;">
+                    <b>该条目的编辑正在进行中。</b>
+                    <br>
+                    请帮助我们<u style="text-decoration: none; color: blue; cursor: pointer;">扩充或改进</u>它。
+                </p>
+            </div>
+            <div style="float:right; border: 1px solid rgb(187, 187, 187); margin-left: 12px; padding: 2px;">
+                <div style="width: 295px; background-color: rgb(188, 212, 245); text-align: center; padding: 7px;">
+                    <b>MC的小方块</b>
+                </div>
+                <table style="border: 0px; width: 100%; font-size: 14px;">
+                    <tr style="background-color: rgb(240, 240, 240); border: 0px;">
+                        <th style="padding: 4px; border: 0px; width: 40%; text-align: left;">生日</th>
+                        <td style="padding: 4px; border: 0px; width: 60%; text-align: left;">2010年11月19日</td>
+                    </tr>
+                    <tr style="background-color: white; border: 0px;">
+                        <th style="padding: 4px; border: 0px; width: 40%; text-align: left;">国籍</th>
+                        <td style="padding: 4px; border: 0px; width: 60%; text-align: left;">中华人民共和国</td>
+                    </tr>
+                    <tr style="background-color: rgb(240, 240, 240); border: 0px;">
+                        <th style="padding: 4px; border: 0px; width: 40%; text-align: left;">GitHub用户名</th>
+                        <td style="padding: 4px; border: 0px; width: 60%; text-align: left;">
+                            <a href="https://github.com/MC-Tiny-Block">MC-Tiny-Block</a>
+                        </td>
+                    </tr>
+                    <tr style="background-color: white; border: 0px;">
+                        <th style="padding: 4px; border: 0px; width: 40%; text-align: left;">哔哩哔哩用户名</th>
+                        <td style="padding: 4px; border: 0px; width: 60%; text-align: left;">
+                            <a href="https://space.bilibili.com/3537122319403020">@MC的小方块</a>
+                        </td>
+                    </tr>
+                    <tr style="background-color: rgb(240, 240, 240); border: 0px;">
+                        <th style="padding: 4px; border: 0px; width: 40%; text-align: left;">Minecraft用户名</th>
+                        <td style="padding: 4px; border: 0px; width: 60%; text-align: left;">
+                            <sup>[<span title="理由：调用Mojang API无法获取UUID" style="border-bottom: 1px dotted; color: blue; cursor: help;">需要更多信息</span>]</sup>
+                        </td>
+                    </tr>
+                    <tr style="background-color: white; border: 0px;">
+                        <th style="padding: 4px; border: 0px; width: 40%; text-align: left;">Modrinth用户名</th>
+                        <td style="padding: 4px; border: 0px; width: 60%; text-align: left;">
+                            <a href="https://modrinth.com/user/Blockling">Blockling</a>
+                            <br>
+                            (曾用名 MC-Tiny-Block)
+                        </td>
+                    </tr>
+                    <tr style="background-color: white; border: 0px;">
+                        <th style="padding: 4px; border: 0px; width: 40%; text-align: left;">MC百科用户名</th>
+                        <td style="padding: 4px; border: 0px; width: 60%; text-align: left;">
+                            <a href="https://www.mcmod.cn/author/33725.html">@MC的小方块</a>
+                            (<a href="https://center.mcmod.cn/454463/">主页</a>)
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <p style="margin: 5px;"><b>MC的小方块</b>是哔哩哔哩的一位UP主，简称“小方块”，目前较为活跃。</p>
+            <h2 style="margin: 8px 5px;">注销事件</h2>
+            <p style="margin: 5px;">2023年7月，由于个人原因与其它因素，小方块的原账号被注销，后展开了斗争；同年9月，现有账号创建，定名“一只草方块MC”，并上传了原留有备份的一期视频<sup><a href="https://www.bilibili.com/BV1Nj411875W">[1]</a></sup>，标志着此事件的终结。9月底至10月初，账号昵称改回“MC的小方块”<sup><a href="https://www.bilibili.com/opus/847065497522405379">[2]</a></sup>。2024年8月6日，账号登录状态的消失与重新登录<sup><a href="https://www.bilibili.com/opus/962440516796940291">[3]</a></sup>，标志着此事件的彻底结束。</p>
+            <h2 style="margin: 8px 5px;">转正</h2>
+            <p style="margin: 5px;">2023年12月17日，小方块获得了Minecraft正版账号<sup><a href="https://www.bilibili.com/opus/875955990157066248">[4]</a></sup>。次年4月27日，新皮肤的绘制工作结束<sup><a href="https://www.bilibili.com/opus/924907811224158210">[5]</a></sup>。10月3日，小方块等人建立了Kook社区。</p>
+            <h2 style="margin: 8px 5px;">动画</h2>
+            <p style="margin: 5px;">2025年1月4日，小方块开始使用Animation做动画<sup><a href="https://www.bilibili.com/opus/1018417001660416002">[6]</a><a href="https://www.bilibili.com/opus/1018920870040567856">[7]</a></sup>。19日，另一个动画制作成了视频并上传<sup><a href="https://www.bilibili.com/video/BV1d1wregEXd">[8]</a></sup>。</p>
+            <h2 style="margin: 8px 5px;">头像的重置</h2>
+            <p style="margin: 5px;">小方块早期头像使用的是草方块及覆学草方块。5月18日，小方块在学校中绘画，并决定将作品作为其个人<ruby>原创角色<rp>(</rp><rt>OC</rt><rp>)</rp></ruby>。7月30日，新头像绘制完成<sup><a href="https://www.bilibili.com/opus/1095334853736398857">[9]</a></sup>。2026年2月3日，小方块重新绘制了头像<sup><a href="https://www.bilibili.com/opus/1168815933074964519">[10]</a></sup>。</p>
+            <h2 style="margin: 8px 5px;">光影</h2>
+            <p style="margin: 5px;">2026年2月1日，小方块为电脑安排了独显<sup><a href="https://www.bilibili.com/opus/1164419643166687232">[11]</a></sup>。4日，为了测试显卡效果，发布了另一期视频<sup><a href="https://www.bilibili.com/video/BV1tNfoBpEJN">[12]</a></sup>。</p>
+            <h2 style="margin: 8px 5px;">特殊时期</h2>
+            <p style="margin: 5px;">中华人民共和国浙江省2026年初中学业水平考试位于6月20日与6月21日。为了准备考试，小方块在3月12日即中考前100日发布了一条动态，说明情况<sup><a href="https://www.bilibili.com/opus/1178911790581415953">[13]</a></sup>。此后，小方块发布的动态不再频繁。</p>
+        </div>
+    </body>
+</html>

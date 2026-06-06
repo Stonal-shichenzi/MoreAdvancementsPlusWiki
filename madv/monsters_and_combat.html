@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="../icon.png">
+        <title>怪物与战斗</title>
+        <style>
+            *
+            {
+                font-family: Arial, "SimHei", "黑体", "Noto Sans SC", sans-serif;
+            }
+            #homepage_border
+            {
+                border-radius: 5px;
+                border: 2px solid silver;
+                background-color: lightgrey;
+                cursor: default;
+            }
+            .homepage_inner
+            {
+                background-color: whitesmoke;
+                display: inline-block;
+                width: calc(var(--width_of_border) * 0.5 - 4.25px);
+                cursor: pointer;
+            }
+            a:link {
+                color: blue;
+                text-decoration: none;
+            }
+            a:visited {
+                color: MediumBlue;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            table {
+                border-collapse: collapse;
+                border: 1px solid black;
+            }
+            tr {
+                border: 1px solid black;
+            }
+            th {
+                border: 1px solid black;
+            }
+            td {
+                border: 1px solid black;
+            }
+            pre.samp {
+                font-family: "JetBrainsMono", "Consolas", monospace;
+            }
+            samp {
+                font-family: "JetBrainsMono", "Consolas", monospace;
+            }
+            body {
+                overflow: hidden;
+            }
+            #main {
+                position: relative;
+                top: 55px;
+                overflow: hidden auto;
+                height: calc(var(--height_of_window) - 70px);
+            }
+        </style>
+        <script>
+            function homepage_resize_update_border(){
+                const element_border = document.getElementById("homepage_border");
+                element_border_width = element_border.offsetWidth;
+                element_border.style.setProperty("--width_of_border", element_border_width + "px");
+                document.body.style.setProperty("--height_of_window", window.innerHeight + "px");
+            }
+            window.addEventListener("resize", () => {
+                homepage_resize_update_border();
+            });
+        </script>
+    </head>
+    <body>
+        <div style="position: absolute; margin: 16px; left: 0px; right: 0px; top: 0px;">
+            <div id="homepage_border">
+                <div class="homepage_inner" onclick="window.location.href = '../index.html';" style="background-color: lawngreen;">
+                    <p style="padding: 5px; margin: 0; text-align: center;">More Advancements</p>
+                </div>
+                <div class="homepage_inner" onclick="window.location.href = '../madv_plus.html';">
+                    <p style="padding: 5px; margin: 0; text-align: center; color: black; text-decoration: none;">More Advancements Plus</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            homepage_resize_update_border();
+        </script>
+        <div id="main">
+        <p style="margin: 5px;">在More Advancements中，“怪物与战斗”选项卡一共有61个进度：</p>
+        <table>
+            <tr>
+                <th style="text-align: center;">图标</td>
+                <th style="text-align: center;">标题</td>
+                <th style="text-align: center;">描述</td>
+                <th style="text-align: center;">文件路径</td>
+            </tr><tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Creeper_Head.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">战果累累</td>
+    <td style="width:200px;">获得所有种类的生物头颅</td>
+    <td style="width:100px;"><samp>monsters_and_combat/all_heads.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Iron_Sword.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">利刃出鞘</td>
+    <td style="width:200px;">使用铁剑攻击你的敌人</td>
+    <td style="width:100px;"><samp>monsters_and_combat/atk_iron_sword.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Mace.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">这我玩个锤子啊！</td>
+    <td style="width:200px;">使用重锤攻击你的敌人</td>
+    <td style="width:100px;"><samp>monsters_and_combat/atk_mace.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Netherite_Sword.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">终极武器</td>
+    <td style="width:200px;">使用下界合金剑攻击你的敌人</td>
+    <td style="width:100px;"><samp>monsters_and_combat/atk_netherite_sword.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Stone_Pickaxe.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">镐击！</td>
+    <td style="width:200px;">也不是不能用，虽然伤害有点低……</td>
+    <td style="width:100px;"><samp>monsters_and_combat/atk_pickaxe.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Diamond_Axe.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">亡灵猎人</td>
+    <td style="width:200px;">使用带有亡灵杀手V魔咒的斧攻击敌人</td>
+    <td style="width:100px;"><samp>monsters_and_combat/atk_smite_axe.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Stone_Axe.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">维京人</td>
+    <td style="width:200px;">用你的斧头重重砸击敌人！</td>
+    <td style="width:100px;"><samp>monsters_and_combat/atk_stone_axe.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Shield.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">硬直状态</td>
+    <td style="width:200px;">用盾牌挡住劫掠兽的攻击并使其眩晕</td>
+    <td style="width:100px;"><samp>monsters_and_combat/block_ravager.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_TNT.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">以爆制爆</td>
+    <td style="width:200px;">炸死一只苦力怕</td>
+    <td style="width:100px;"><samp>monsters_and_combat/boom_creeper.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Empty_Locator_Map.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">远征之路</td>
+    <td style="width:200px;">在制图师那里交易到试炼探险家地图</td>
+    <td style="width:100px;"><samp>monsters_and_combat/buy_trial_map.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_TNT.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">防爆盾牌</td>
+    <td style="width:200px;">用盾牌挡住苦力怕的爆炸</td>
+    <td style="width:100px;"><samp>monsters_and_combat/deflect_creeper.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Flint_and_Steel.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">手动引爆</td>
+    <td style="width:200px;">引爆一只苦力怕</td>
+    <td style="width:100px;"><samp>monsters_and_combat/fire_creeper.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_TNT.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">快——逃——</td>
+    <td style="width:200px;">引燃一只闪电苦力怕</td>
+    <td style="width:100px;"><samp>monsters_and_combat/fire_lighting_creeper.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Raw_Cod.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">鱼叉？</td>
+    <td style="width:200px;">使用带穿刺魔咒的三叉戟近战攻击水生生物</td>
+    <td style="width:100px;"><samp>monsters_and_combat/harpoon.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Heavy_Core.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">密度超高</td>
+    <td style="width:200px;">获得沉重核心</td>
+    <td style="width:100px;"><samp>monsters_and_combat/heavy_core.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Fire_Charge.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">空袭警告！</td>
+    <td style="width:200px;">被恶魂的火球炸伤</td>
+    <td style="width:100px;"><samp>monsters_and_combat/hurted_by_ghast.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Minecart_with_TNT.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">黑曜石体质</td>
+    <td style="width:200px;">受到苦力怕的20点爆炸伤害并存活下来</td>
+    <td style="width:100px;"><samp>monsters_and_combat/hurt_by_creeper.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Piglin_Head.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">猪灵之战</td>
+    <td style="width:200px;">攻击猪灵</td>
+    <td style="width:100px;"><samp>monsters_and_combat/hurt_piglin.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Stone_Spear.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">一寸长一寸强</td>
+    <td style="width:200px;">用矛击杀一个生物</td>
+    <td style="width:100px;"><samp>monsters_and_combat/jab_a_mob.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Saddle.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">群骑纷争</td>
+    <td style="width:200px;">击杀所有种类的骑士！（击杀坐骑或骑手均可，但如果骑手和坐骑分离则不计入）</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_all_jockeys.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Netherrack.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">洗清祸患</td>
+    <td style="width:200px;">击杀所有下界敌对生物</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_all_nether_monsters.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Wither_Skeleton_Skull.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">骨干成员</td>
+    <td style="width:200px;">击杀所有骷髅类生物</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_all_skeleton.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Rotten_Flesh.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">僵尸公敌</td>
+    <td style="width:200px;">击杀所有僵尸类生物</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_all_zombies.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Camel_Husk_Spawn_Egg.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">过关斩将</td>
+    <td style="width:200px;">击杀一位骑着骆驼尸壳的骑兵</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_a_mob_on_camel.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Breeze_Rod.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">呼呼呼——</td>
+    <td style="width:200px;">击杀一只旋风人</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_breeze.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Wind_Charge.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">现在谁才是旋风人？</td>
+    <td style="width:200px;">用风弹击杀一只旋风人</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_breeze_with_wind_charge.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Cave_Spider_Spawn_Egg_Revision_2.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">锐利毒牙</td>
+    <td style="width:200px;">击杀一只洞穴蜘蛛</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_cave_spider.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Creeper_Head.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">滋滋滋……</td>
+    <td style="width:200px;">击杀一只苦力怕</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_creeper.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Ender_Pearl.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">三界旅者</td>
+    <td style="width:200px;">击杀一个末影人</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_enderman.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Mace.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">地动山摇</td>
+    <td style="width:200px;">用重锤一击终结末影龙</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_ender_dragon_by_mace.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Evoker_Spawn_Egg_Revision_2.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">真正的魔法师</td>
+    <td style="width:200px;">击杀一个唤魔者</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_evoker.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Pillager_Spawn_Egg_Revision_2.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">正当防卫</td>
+    <td style="width:200px;">击杀一个掠夺者</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_pillager.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Ravager_Spawn_Egg_Revision_2.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">战争野兽</td>
+    <td style="width:200px;">击杀一只劫掠兽</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_ravager.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Skeleton_Skull.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">白骨嶙峋</td>
+    <td style="width:200px;">击杀一只骷髅</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_skeleton.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Slime_Spawn_Egg_Revision_2.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">它会分裂？</td>
+    <td style="width:200px;">击杀一只史莱姆并眼睁睁看着它分裂</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_slime.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Spider_Eye.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">爬墙能手</td>
+    <td style="width:200px;">击杀一只蜘蛛</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_spider.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Vex_Spawn_Egg_Revision_2.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">啊啊啊啊烦死人了！！</td>
+    <td style="width:200px;">击杀一个恼鬼</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_vex.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Vindicator_Spawn_Egg_Revision_2.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">狂战士</td>
+    <td style="width:200px;">击杀一个卫道士</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_vindicator.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Witch_Spawn_Egg_Revision_2.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">魔法巫师</td>
+    <td style="width:200px;">击杀一个女巫</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_witch.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Zombie_Head.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">僵尸危机</td>
+    <td style="width:200px;">击杀一只僵尸</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_zombie.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Wooden_Sword.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">空手道</td>
+    <td style="width:200px;">空手击杀一只僵尸</td>
+    <td style="width:100px;"><samp>monsters_and_combat/kill_zombie_by_hand.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Mace.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">重力势能</td>
+    <td style="width:200px;">从高处坠落并用重锤粉碎敌人生还的梦（造成至少20点伤害）</td>
+    <td style="width:100px;"><samp>monsters_and_combat/mace_smash.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Zombified_Piglin_Spawn_Egg_Revision_2.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">千军万马，常伴吾身</td>
+    <td style="width:200px;">攻击一只僵尸猪灵</td>
+    <td style="width:100px;"><samp>monsters_and_combat/many_zombified_piglins.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Diamond_Sword.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">赶尽杀绝</td>
+    <td style="width:200px;">在一击内造成9颗心的伤害</td>
+    <td style="width:100px;"><samp>monsters_and_combat/overkill.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Netherite_Sword.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">怪物与战斗</td>
+    <td style="width:200px;">了解并除掉你的敌人，与朋友并肩作战</td>
+    <td style="width:100px;"><samp>monsters_and_combat/root.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Ghast_Spawn_Egg_Revision_3.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">气球射击</td>
+    <td style="width:200px;">用箭射击恶魂</td>
+    <td style="width:100px;"><samp>monsters_and_combat/shoot_ghast.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Arrow.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">幕后黑手</td>
+    <td style="width:200px;">在100格外射杀一只恶魂</td>
+    <td style="width:100px;"><samp>monsters_and_combat/shoot_ghast_100b_away.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Wooden_Spear.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">戳刺时间到！</td>
+    <td style="width:200px;">把锹的配方摆歪一点，然后合成出一根棒子？</td>
+    <td style="width:100px;"><samp>monsters_and_combat/spears.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Diamond_Spear.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">动能武器</td>
+    <td style="width:200px;">用矛一击对生物造成至少40点伤害！</td>
+    <td style="width:100px;"><samp>monsters_and_combat/spear_mob_strongly.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Saddle.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">锋至踏来</td>
+    <td style="width:200px;">在你的坐骑上勇猛地戳穿敌人吧！</td>
+    <td style="width:100px;"><samp>monsters_and_combat/spear_on_mounts.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Trident.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">闪电充能</td>
+    <td style="width:200px;">雷击一只苦力怕</td>
+    <td style="width:100px;"><samp>monsters_and_combat/summon_lightning_creeper.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Netherite_Spear.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">精确制导</td>
+    <td style="width:200px;">用矛一击对末影螨造成至少100点伤害！</td>
+    <td style="width:100px;"><samp>monsters_and_combat/super_spear.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Totem_of_Undying.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">免死金牌</td>
+    <td style="width:200px;">获得不死图腾</td>
+    <td style="width:100px;"><samp>monsters_and_combat/totem_of_undying.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Music_Disc_Precipice.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">试炼之声</td>
+    <td style="width:200px;">收集Precipice、Creator和Creator（八音盒）三张唱片</td>
+    <td style="width:100px;"><samp>monsters_and_combat/trial_discs.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Trial_Key.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">神秘钥匙</td>
+    <td style="width:200px;">获得试炼钥匙</td>
+    <td style="width:100px;"><samp>monsters_and_combat/trial_key.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Ominous_Bottle.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">精英试炼</td>
+    <td style="width:200px;">使用不祥之瓶之后靠近一个试炼刷怪笼来开始你的不祥试炼</td>
+    <td style="width:100px;"><samp>monsters_and_combat/trial_omen.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Flow_Armor_Trim.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">战甲纹饰</td>
+    <td style="width:200px;">在试炼密室里收集旋风和镶铆纹饰锻造模板</td>
+    <td style="width:100px;"><samp>monsters_and_combat/trial_template.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Potion_of_Healing.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">命悬一线</td>
+    <td style="width:200px;">你的血条在发抖，它快撑不住了……</td>
+    <td style="width:100px;"><samp>monsters_and_combat/two_hearts.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Bow.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">拉弓上弦</td>
+    <td style="width:200px;">长按右键以拉弓</td>
+    <td style="width:100px;"><samp>monsters_and_combat/use_bow.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Carved_Pumpkin.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">失控的木头人</td>
+    <td style="width:200px;">戴上雕刻南瓜，然后注视嘎枝……</td>
+    <td style="width:100px;"><samp>monsters_and_combat/watch_creaking_with_pumpkin.json</samp></td>
+</tr>
+<tr style="height:52px;">
+    <td style="width:52px;"><div>
+    <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+    <img src="https://zh.minecraft.wiki/images/Invicon_Wind_Charge.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+</div></td>
+    <td style="width:75px;">旋风之力</td>
+    <td style="width:200px;">用带风爆附魔的重锤砸击生物(至少造成20点伤害)</td>
+    <td style="width:100px;"><samp>monsters_and_combat/wind_brust.json</samp></td>
+</tr>
+</table></div></body></html>

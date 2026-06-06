@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="../icon.png">
+        <title>下界</title>
+        <style>
+            *
+            {
+                font-family: Arial, "SimHei", "黑体", "Noto Sans SC", sans-serif;
+            }
+            #homepage_border
+            {
+                border-radius: 5px;
+                border: 2px solid silver;
+                background-color: lightgrey;
+                cursor: default;
+            }
+            .homepage_inner
+            {
+                background-color: whitesmoke;
+                display: inline-block;
+                width: calc(var(--width_of_border) * 0.5 - 4.25px);
+                cursor: pointer;
+            }
+            a:link {
+                color: blue;
+                text-decoration: none;
+            }
+            a:visited {
+                color: MediumBlue;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            table {
+                border-collapse: collapse;
+                border: 1px solid black;
+            }
+            tr {
+                border: 1px solid black;
+            }
+            th {
+                border: 1px solid black;
+            }
+            td {
+                border: 1px solid black;
+            }
+            pre.samp {
+                font-family: "JetBrainsMono", "Consolas", monospace;
+            }
+            samp {
+                font-family: "JetBrainsMono", "Consolas", monospace;
+            }
+            body {
+                overflow: hidden;
+            }
+            #main {
+                position: relative;
+                top: 55px;
+                overflow: hidden auto;
+                height: calc(var(--height_of_window) - 70px);
+            }
+        </style>
+        <script>
+            function homepage_resize_update_border(){
+                const element_border = document.getElementById("homepage_border");
+                element_border_width = element_border.offsetWidth;
+                element_border.style.setProperty("--width_of_border", element_border_width + "px");
+                document.body.style.setProperty("--height_of_window", window.innerHeight + "px");
+            }
+            window.addEventListener("resize", () => {
+                homepage_resize_update_border();
+            });
+        </script>
+    </head>
+    <body>
+        <div style="position: absolute; margin: 16px; left: 0px; right: 0px; top: 0px;">
+            <div id="homepage_border">
+                <div class="homepage_inner" onclick="window.location.href = '../index.html';" style="background-color: lawngreen;">
+                    <p style="padding: 5px; margin: 0; text-align: center;">More Advancements</p>
+                </div>
+                <div class="homepage_inner" onclick="window.location.href = '../madv_plus.html';">
+                    <p style="padding: 5px; margin: 0; text-align: center; color: black; text-decoration: none;">More Advancements Plus</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            homepage_resize_update_border();
+        </script>
+        <div id="main">
+            <p style="margin: 5px;">在More Advancements中，“下界”选项卡一共新增了1个进度：</p>
+            <table>
+                <tr>
+                    <th style="text-align: center;">图标</td>
+                    <th style="text-align: center;">标题</td>
+                    <th style="text-align: center;">描述</td>
+                    <th style="text-align: center;">文件路径</td>
+                </tr>
+                <tr style="height:52px;">
+                    <td style="width:52px;">
+                        <div>
+                            <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+                            <img src="https://zh.minecraft.wiki/images/Invicon_Bedrock.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 2px; margin: 10px">
+                        </div>
+                    </td>
+                    <td style="width:75px;">无人之境</td>
+                    <td style="width:200px;">先别管你怎么上来的，看看你背包里有没有黑曜石和打火石之类的……</td>
+                    <td style="width:100px;"><samp>nether/top_of_nether.json</samp></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
