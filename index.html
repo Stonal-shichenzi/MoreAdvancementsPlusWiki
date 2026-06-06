@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="icon.png">
+        <title>More Advancements Plus Wiki</title>
+        <style>
+            *
+            {
+                font-family: Arial, "SimHei", "黑体", "Noto Sans SC", sans-serif;
+            }
+            #homepage_border
+            {
+                border-radius: 5px;
+                border: 2px solid silver;
+                background-color: lightgrey;
+                cursor: default;
+            }
+            .homepage_inner
+            {
+                background-color: whitesmoke;
+                display: inline-block;
+                width: calc(var(--width_of_border) * 0.5 - 4.25px);
+                cursor: pointer;
+            }
+            a:link {
+                color: blue;
+                text-decoration: none;
+            }
+            a:visited {
+                color: MediumBlue;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            table {
+                border-collapse: collapse;
+                border: 1px solid black;
+            }
+            tr {
+                border: 1px solid black;
+            }
+            th {
+                border: 1px solid black;
+            }
+            td {
+                border: 1px solid black;
+            }
+            pre.samp {
+                font-family: "JetBrainsMono", "Consolas", monospace;
+            }
+            samp {
+                font-family: "JetBrainsMono", "Consolas", monospace;
+            }
+            body {
+                overflow: hidden;
+            }
+            #main {
+                position: relative;
+                top: 55px;
+                overflow: hidden auto;
+                height: calc(var(--height_of_window) - 70px);
+            }
+        </style>
+        <script>
+            function homepage_resize_update_border(){
+                const element_border = document.getElementById("homepage_border");
+                element_border_width = element_border.offsetWidth;
+                element_border.style.setProperty("--width_of_border", element_border_width + "px");
+                document.body.style.setProperty("--height_of_window", window.innerHeight + "px");
+            }
+            window.addEventListener("resize", () => {
+                homepage_resize_update_border();
+            });
+        </script>
+    </head>
+    <body>
+        <div style="position: absolute; margin: 16px; left: 0px; right: 0px; top: 0px;">
+            <div id="homepage_border">
+                <div class="homepage_inner" style="background-color: lawngreen;">
+                    <p style="padding: 5px; margin: 0; text-align: center;">More Advancements</p>
+                </div>
+                <div class="homepage_inner" onclick="window.location.href = 'madv_plus.html';">
+                    <p style="padding: 5px; margin: 0; text-align: center; color: black; text-decoration: none;">More Advancements Plus</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            homepage_resize_update_border();
+        </script>
+        <div id="main">
+            <h1 style="font-family: Cambria, 'Times New Roman', SimSun, serif; margin: 5px;">更多进度</h1>
+            <hr>
+            <p style="margin: 5px;">欢迎来到More Advancements Plus Wiki，一个旨在记录所有关于More Advancements及其扩展More Advancements Plus所有信息的Wiki，也是一个<a href="https://github.com/Stonal-shichenzi/MoreAdvancementsPlusWiki">开源</a>的网站。</p>
+            <p style="margin: 5px;">More Advancements，亦称“更多进度”，是由哔哩哔哩UP主<a href="madv/author.html">MC的小方块</a>制作的数据包，自<sup>[<span title="第一个版本发布的时间；理由：视频链接已丢失" style="border-bottom: 1px dotted; color: blue; cursor: help;">需要更多信息</span>]</sup>以来持续开发。2024年9月15日，Beta 1.0发布<sup><a href="https://www.bilibili.com/BV14G42evEwB">[1]</a></sup>。同年12月，发布了Beta 1.1以适配Minecraft Java版1.21.4苍园觉醒更新<sup><a href="https://www.bilibili.com/BV12CB5YWEny">[2]</a></sup>。追逐天空发布后，该数据包的Beta 1.2发布<sup><a href="https://www.bilibili.com/BV19fGHzvE51">[3]</a></sup>。截至目前，最新版为Beta 1.2.5，而此数据包的源代码可以通过<a href="https://github.com/MC-Tiny-Block/More_Advancements">这里</a>查看<sup><a href="https://modrinth.com/datapack/more-advancements">[4]</a><a href="https://modrinth.com/datapack/more-advancements">[5]</a></sup>。</p>
+            <p style="margin: 5px;">More Advancements目前一共新增了<a href="madv/construction.html">建筑</a>、<a href="madv/enchantments_and_crafting.html">魔咒与工艺</a>、<a href="madv/hardcore.html">硬核挑战</a>、<a href="madv/mine.html">采掘</a>、<a href="madv/monsters_and_combat.html">怪物与战斗</a>、<a href="madv/redstone.html">红石</a>、<a href="madv/tech.html">tech</a><sup>[暂无名称]</sup>、<a href="madv/temp.html">临时存放</a>、<a href="madv/world.html">世界</a>等标签页，同时扩展了<a href="madv/adventure.html">冒险</a>、<a href="madv/husbandry.html">农牧业</a>、<a href="madv/nether.html">下界</a>、<a href="madv/story.html">Minecraft</a>等标签页。</p>
+        </div>
+    </body>
+</html>
