@@ -62,17 +62,30 @@
                 overflow: hidden auto;
                 height: calc(var(--height_of_window) - 70px);
             }
+            #adv_icons {
+                overflow: visible visible;
+                /* width: calc(var(--width_of_window) - 8px); */
+            }
+            .adv_icon_term {
+                width: 60px;
+            }
+            .adv_icon_image {
+                width: 52px;
+                position: relative;
+                left: 4px;
+                top: 4px;
+            }
         </style>
         <script>
             function homepage_resize_update_border(){
                 const element_border = document.getElementById("homepage_border");
+                const adv_icons = document.getElementById("adv_icons");
                 element_border_width = element_border.offsetWidth;
                 element_border.style.setProperty("--width_of_border", element_border_width + "px");
                 document.body.style.setProperty("--height_of_window", window.innerHeight + "px");
+                document.body.style.setProperty("--width_of_window", window.innerWidth + "px");
             }
-            window.addEventListener("resize", () => {
-                homepage_resize_update_border();
-            });
+            window.addEventListener("resize", homepage_resize_update_border);
         </script>
     </head>
     <body>
@@ -501,7 +514,7 @@
                 </tr>
                 <tr>
                     <td>English (US)</td>
-                    <td>New & Full Moon</td>
+                    <td>New &amp; Full Moon</td>
                     <td>When the sun rise... 30 times...</td>
                 </tr>
                 <tr>
@@ -609,7 +622,7 @@
                 </tr>
                 <tr>
                     <td>English (US)</td>
-                    <td>Spring & Autumn Peroid</td>
+                    <td>Spring &amp; Autumn Peroid</td>
                     <td>The 365th day!</td>
                 </tr>
                 <tr>
@@ -933,7 +946,7 @@
                 </tr>
                 <tr>
                     <td>English (US)</td>
-                    <td>Analog & Digital Circuit</td>
+                    <td>Analog &amp; Digital Circuit</td>
                     <td>The beginning of information technology!</td>
                 </tr>
                 <tr>
@@ -1238,157 +1251,165 @@
                 </tr>
             </table>
             <h2 style="margin: 8px 5px;">进度图标</h2>
-            <table>
+            <table id="adv_icons">
                 <tr>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Redstone_Repeater.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-oval-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Golden_Sword.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_End_Rod.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Melon_Seeds.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Campfire.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Nether_Wart.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-fancy-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Block_of_Netherite.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Calibrated_Sculk_Sensor.gif" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Redstone_Comparator.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Daylight_Detector.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
+                </tr>
+                <tr>
+                    <th class="adv_icon_term">伤人事故</th>
+                    <th class="adv_icon_term">物品全收集</th>
+                    <th class="adv_icon_term">末地中的灯光</th>
+                    <th class="adv_icon_term">轮作</th>
+                    <th class="adv_icon_term">升起烟雾的篝火</th>
+                    <th class="adv_icon_term">异界农业</th>
+                    <th class="adv_icon_term">如太阳一般炫酷</th>
+                    <th class="adv_icon_term">自带滤波的传感器</th>
+                    <th class="adv_icon_term">红石比较器</th>
+                    <th class="adv_icon_term">信息收集：阳光与内能</th>
+                </tr>
+                <tr>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Redstone_Torch.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Redstone_Repeater.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Sculk_Sensor.gif" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Bucket.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Bucket.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Sponge.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Clock.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Clock.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                     <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Clock.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                     <td>
-                        <div style="position: relative;">
-                            <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
-                            <img src="https://zh.minecraft.wiki/images/Invicon_Clock.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
-                        </div>
-                    </td>
-                    <td>
-                        <div style="position: relative;">
+                        <div class="adv_icon_image">
                             <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
                             <img src="https://zh.minecraft.wiki/images/Invicon_Clock.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <th style="width: 60px;">伤人事故</th>
-                    <th style="width: 60px;">物品全收集</th>
-                    <th style="width: 60px;">末地中的灯光</th>
-                    <th style="width: 60px;">轮作</th>
-                    <th style="width: 60px;">升起烟雾的篝火</th>
-                    <th style="width: 60px;">异界农业</th>
-                    <th style="width: 60px;">如太阳一般炫酷</th>
-                    <th style="width: 60px;">自带滤波的传感器</th>
-                    <th style="width: 60px;">红石比较器</th>
-                    <th style="width: 60px;">信息收集：阳光与内能</th>
-                    <th style="width: 60px;">逻辑非</th>
-                    <th style="width: 60px;">红石中继器</th>
-                    <th style="width: 60px;">电阻很低的传感器</th>
-                    <th style="width: 60px;">万花桶</th>
-                    <th style="width: 60px;">不透明鱼缸</th>
-                    <th style="width: 60px;">你说你获得了什么？</th>
-                    <th style="width: 60px;">度过首个夜晚</th>
-                    <th style="width: 60px;">周末会更好</th>
-                    <th style="width: 60px;">海上生盈月</th>
-                    <th style="width: 60px;">季节苦行山</th>
-                    <th style="width: 60px;">跨年失败</th>
+                    <th class="adv_icon_term">逻辑非</th>
+                    <th class="adv_icon_term">红石中继器</th>
+                    <th class="adv_icon_term">电阻很低的传感器</th>
+                    <th class="adv_icon_term">万花桶</th>
+                    <th class="adv_icon_term">不透明鱼缸</th>
+                    <th class="adv_icon_term">你说你获得了什么？</th>
+                    <th class="adv_icon_term">度过首个夜晚</th>
+                    <th class="adv_icon_term">周末会更好</th>
+                    <th class="adv_icon_term">海上生盈月</th>
+                    <th class="adv_icon_term">季节苦行山</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="adv_icon_image">
+                            <img src="https://zh.minecraft.wiki/images/Advancement-plain-raw.png" decoding="async" loading="lazy" width="52" height="52">
+                            <img src="https://zh.minecraft.wiki/images/Invicon_Clock.png" decoding="async" loading="lazy" width="32" height="32" style="position: absolute; left: 10px; top: 10px;">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="adv_icon_term">跨年失败</th>
                 </tr>
             </table>
         </div>
